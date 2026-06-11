@@ -1,0 +1,200 @@
+﻿  var style = document.createElement('style');
+  style.textContent = '@keyframes mapPulse{0%{transform:scale(1);opacity:.5}100%{transform:scale(2.5);opacity:0}}' +
+    '.riva-label{background:rgba(15,35,56,.92);color:#C4A97D;padding:5px 12px;border-radius:6px;font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;border:1px solid rgba(196,169,125,.25);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.3)}' +
+    '.beach-label{background:rgba(15,35,56,.92);color:#6FA8C7;padding:5px 12px;border-radius:6px;font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:2px;border:1px solid rgba(111,168,199,.25);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.3)}' +
+    '.poi-marker{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-size:14px;box-shadow:0 2px 8px rgba(0,0,0,.3);border:2px solid rgba(255,255,255,.5);cursor:pointer;transition:transform .3s,box-shadow .3s}' +
+    '.poi-marker:hover{transform:scale(1.25);box-shadow:0 2px 16px rgba(0,0,0,.5)}' +
+    '.poi-hover-label{background:rgba(15,35,56,.92);color:#fff;padding:6px 14px;border-radius:8px;font-family:Inter,sans-serif;font-size:11px;font-weight:500;letter-spacing:.5px;white-space:nowrap;border-left:3px solid;box-shadow:0 4px 16px rgba(0,0,0,.4);animation:distBadgeFadeIn .25s ease-out;pointer-events:none;text-align:center}' +
+    '.poi-hover-dist{color:rgba(255,255,255,.5);font-size:10px;margin-left:6px;font-weight:400}' +
+    '.dist-badge{background:rgba(15,35,56,.92);color:#fff;padding:6px 14px;border-radius:8px;font-family:Inter,sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;white-space:nowrap;border:1px solid rgba(196,169,125,.25);box-shadow:0 4px 20px rgba(0,0,0,.4);text-align:center;line-height:1.4}' +
+    '.dist-badge strong{color:#C4A97D;font-size:13px}' +
+    '.dist-badge small{display:block;color:rgba(255,255,255,.5);font-size:9px;font-weight:400;letter-spacing:1.5px;margin-top:2px}' +
+    '.poi-dist-badge{background:rgba(15,35,56,.95);color:#fff;padding:5px 12px;border-radius:6px;font-family:Inter,sans-serif;font-size:11px;font-weight:600;letter-spacing:1px;white-space:nowrap;border:1px solid rgba(255,255,255,.15);box-shadow:0 4px 20px rgba(0,0,0,.5);text-align:center;line-height:1.4;animation:distBadgeFadeIn .4s ease-out}' +
+    '.poi-dist-badge strong{font-size:13px;display:block}' +
+    '.poi-dist-badge small{display:block;color:rgba(255,255,255,.4);font-size:8px;font-weight:400;letter-spacing:1.5px;margin-top:1px}' +
+    '@keyframes distBadgeFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}' +
+    '@keyframes distLineDash{to{stroke-dashoffset:-40px}}' +
+    '.dist-line-animate{animation:distLineGrow .6s ease-out}' +
+    '.walking-route-animate{stroke-dasharray:12 8;animation:distLineDash 1.2s linear infinite}' +
+    '.map-view-toggle{margin:10px}' +
+    '.map-toggle-btn{display:flex;align-items:center;gap:8px;padding:8px 16px;background:rgba(15,35,56,.92);color:#C4A97D;border:1px solid rgba(196,169,125,.3);border-radius:8px;font-family:Inter,sans-serif;font-size:10px;font-weight:600;letter-spacing:1.5px;cursor:pointer;transition:all .3s;box-shadow:0 4px 16px rgba(0,0,0,.3);backdrop-filter:blur(8px)}' +
+    '.map-toggle-btn:hover{background:rgba(15,35,56,.98);border-color:rgba(196,169,125,.5);transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.4)}' +
+    '.map-toggle-btn.active{background:rgba(196,169,125,.15);border-color:rgba(196,169,125,.5)}' +
+    '.map-toggle-icon{font-size:14px}' +
+    '.map-toggle-text{font-size:10px}';
+  document.head.appendChild(style);
+
+  // -- Riva marker (gold, pulsing) --
+  L.marker(riva, {
+    icon: L.divIcon({
+      className: '',
+      html: '<div style="width:48px;height:48px;position:relative">' +
+        '<div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(196,169,125,.35);animation:mapPulse 2.5s infinite"></div>' +
+        '<div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(196,169,125,.2);animation:mapPulse 2.5s .8s infinite"></div>' +
+        '<div style="position:absolute;inset:8px;border-radius:50%;background:rgba(196,169,125,.08);border:1.5px solid rgba(196,169,125,.45)"></div>' +
+        '<div style="position:absolute;top:50%;left:50%;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#C4A97D;box-shadow:0 0 20px rgba(196,169,125,.5)"></div>' +
+        '<div style="position:absolute;top:50%;left:50%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:#fff"></div></div>',
+      iconSize: [48,48], iconAnchor: [24,24], popupAnchor: [0,-26]
+    })
+  }).addTo(map).bindPopup(
+    '<div class="map-popup-info">' +
+    '<div class="map-popup-title">RIVA RESIDENCES</div>' +
+    '<div class="map-popup-sub">19 Recreation Parade, Semaphore Park</div></div>'
+  );
+
+  // -- Riva label with small render thumbnail --
+  L.marker(riva, {
+    icon: L.divIcon({
+      className: '',
+      html: '<div class="riva-map-thumb">' +
+        '<img src="render-facade.jpg" alt="Riva" class="riva-map-thumb-img">' +
+        '<div class="riva-map-thumb-label">RIVA</div>' +
+        '</div>',
+      iconSize: [72, 58],
+      iconAnchor: [36, 76]
+    }),
+    interactive: false,
+    zIndexOffset: 400
+  }).addTo(map);
+
+  // -- Beach marker (blue) --
+  L.marker(beach, {
+    icon: L.divIcon({
+      className: '',
+      html: '<div style="width:42px;height:42px;position:relative">' +
+        '<div style="position:absolute;inset:5px;border-radius:50%;background:rgba(111,168,199,.08);border:1.5px solid rgba(111,168,199,.4)"></div>' +
+        '<div style="position:absolute;top:50%;left:50%;width:12px;height:12px;margin:-6px 0 0 -6px;border-radius:50%;background:#6FA8C7;box-shadow:0 0 14px rgba(111,168,199,.45)"></div>' +
+        '<div style="position:absolute;top:50%;left:50%;width:4px;height:4px;margin:-2px 0 0 -2px;border-radius:50%;background:#fff"></div></div>',
+      iconSize: [42,42], iconAnchor: [21,21], popupAnchor: [0,-23]
+    })
+  }).addTo(map).bindPopup(
+    '<div class="map-popup-info">' +
+    '<div class="map-popup-title">Semaphore Park Beach</div>' +
+    '<div class="map-popup-sub">400m &bull; 6 min walk</div></div>'
+  );
+
+  // -- Beach label --
+  L.marker(beach, {
+    icon: L.divIcon({ className: '', html: '<div class="beach-label">BEACH</div>', iconSize: [65,24], iconAnchor: [32, -12] }),
+    interactive: false
+  }).addTo(map);
+
+  // -- Active distance line state --
+  var activeDistLine = null;
+  var activeDistGlow = null;
+  var activeDistLabel = null;
+  var activeRouteCache = {};
+
+  function clearDistanceLine() {
+    if (activeDistLine) { map.removeLayer(activeDistLine); activeDistLine = null; }
+    if (activeDistGlow) { map.removeLayer(activeDistGlow); activeDistGlow = null; }
+    if (activeDistLabel) { map.removeLayer(activeDistLabel); activeDistLabel = null; }
+  }
+
+  function showDriveRoute(poiLatLng, color, dist, drive, name) {
+    clearDistanceLine();
+    var cacheKey = poiLatLng[0] + ',' + poiLatLng[1];
+
+    function drawDriveRoute(coords) {
+      // Glow
+      activeDistGlow = L.polyline(coords, {
+        color: color, weight: 10, opacity: 0.15,
+        lineCap: 'round', lineJoin: 'round'
+      }).addTo(map);
+      // Route line with animated dashes
+      activeDistLine = L.polyline(coords, {
+        color: color, weight: 3, opacity: 0.85,
+        dashArray: '10, 8', lineCap: 'round',
+        className: 'walking-route-animate'
+      }).addTo(map);
+      // Distance label at midpoint of route
+      var midIdx = Math.floor(coords.length / 2);
+      var midPt = coords[midIdx] || [(riva[0]+poiLatLng[0])/2, (riva[1]+poiLatLng[1])/2];
+      activeDistLabel = L.marker(midPt, {
+        icon: L.divIcon({
+          className: '',
+          html: '<div class="poi-dist-badge" style="border-color:' + color + '"><strong style="color:' + color + '"><svg style="width:14px;height:14px;fill:' + color + ';vertical-align:middle;margin-right:3px" viewBox="0 0 24 24"><path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/></svg>' + dist + '</strong> <span style="color:rgba(255,255,255,.6);font-size:10px">' + drive + ' drive</span><small>' + name.toUpperCase() + '</small></div>',
+          iconSize: [180,48], iconAnchor: [90,24]
+        }),
+        interactive: false
+      }).addTo(map);
+      // Fit bounds to show the route
+      map.fitBounds(L.polyline(coords).getBounds().pad(0.15), { duration: 0.8 });
+    }
+
+    // Check cache first
+    if (activeRouteCache[cacheKey]) {
+      drawDriveRoute(activeRouteCache[cacheKey]);
+      return;
+    }
+
+    // Fetch OSRM driving route
+    var osrmDriveUrl = 'https://router.project-osrm.org/route/v1/driving/' +
+      riva[1] + ',' + riva[0] + ';' + poiLatLng[1] + ',' + poiLatLng[0] +
+      '?overview=full&geometries=geojson';
+
+    fetch(osrmDriveUrl)
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        if (data.routes && data.routes[0]) {
+          var geo = data.routes[0].geometry.coordinates;
+          var latlngs = geo.map(function(c) { return [c[1], c[0]]; });
+          activeRouteCache[cacheKey] = latlngs;
+          drawDriveRoute(latlngs);
+        } else {
+          // Fallback to straight line
+          drawDriveRoute([riva, poiLatLng]);
+        }
+      })
+      .catch(function() {
+        drawDriveRoute([riva, poiLatLng]);
+      });
+  }
+
+  // -- POI markers with click-to-show drive routes --
+  var activePoi = null;
+  var poiTooltips = [];
+
+  pois.forEach(function(poi) {
+    // Tooltip label that appears on hover
+    var tooltipLabel = L.marker([poi.lat, poi.lng], {
+      icon: L.divIcon({
+        className: '',
+        html: '<div class="poi-hover-label" style="border-color:' + poi.color + '">' + poi.icon + ' ' + poi.name + ' <span class="poi-hover-dist">' + poi.dist + '</span></div>',
+        iconSize: [200, 32], iconAnchor: [100, -8]
+      }),
+      interactive: false,
+      pane: 'tooltipPane'
+    });
+    poiTooltips.push({ label: tooltipLabel, poi: poi });
+
+    var marker = L.marker([poi.lat, poi.lng], {
+      icon: L.divIcon({
+        className: '',
+        html: '<div class="poi-marker" style="background:' + poi.color + '">' + poi.icon + '</div>',
+        iconSize: [28,28], iconAnchor: [14,14], popupAnchor: [0,-16]
+      })
+    }).addTo(map).bindPopup(
+      '<div class="map-popup-info">' +
+      '<div class="map-popup-title">' + poi.name + '</div>' +
+      '<div class="map-popup-sub">' + poi.dist + ' &bull; ' + poi.drive + ' drive</div></div>'
+    );
+
+    // Hover: show name tooltip only (no route)
+    marker.on('mouseover', function() {
+      if (activePoi !== poi) {
+        tooltipLabel.addTo(map);
+      }
+    });
+    marker.on('mouseout', function() {
+      if (activePoi !== poi) {
+        map.removeLayer(tooltipLabel);
+      }
+    });
+
+    // Click: show drive route
+    marker.on('click', function(e) {
+      L.DomEvent.stopPropagation(e);
+      // Remove previous tooltip
+      poiTooltips.forEach(function(t) { map.removeLayer(t.label); });
+

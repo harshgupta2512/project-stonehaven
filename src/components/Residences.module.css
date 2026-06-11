@@ -1,0 +1,162 @@
+.residences {
+  /* Wraps all scenes */
+}
+
+/* Full-bleed scene */
+.scene--full {
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .scene--full {
+    min-height: 80vh;
+    height: 100vh;
+  }
+}
+
+.scene--full__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.scene--full__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 16, 15, 0.8) 0%,
+    rgba(14, 16, 15, 0.2) 60%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.scene--full__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-xl) var(--space-md);
+  max-width: 640px;
+}
+
+@media (min-width: 1024px) {
+  .scene--full__content {
+    padding: var(--space-2xl) var(--space-xl);
+  }
+}
+
+.scene--full__heading {
+  font-family: var(--font-display);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--color-text-inverse);
+  line-height: 1.2;
+  margin-bottom: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .scene--full__heading {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scene--full__heading {
+    font-size: 56px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .scene--full__heading {
+    font-size: 64px;
+  }
+}
+
+.scene--full__body {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+/* Inset scene */
+.scene--inset {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.scene--inset-light {
+  background-color: var(--color-bg-secondary);
+}
+
+.scene--inset-warm {
+  background-color: var(--color-bg-tertiary);
+}
+
+.scene--inset__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .scene--inset__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+.scene--inset__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .scene--inset__image {
+    height: 450px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .scene--inset__image {
+    height: 520px;
+  }
+}
+
+.scene--inset__text {
+  padding: var(--space-md) 0;
+}
+
+@media (min-width: 1024px) {
+  .scene--inset__text {
+    padding: var(--space-lg);
+  }
+}
+
+/* Reverse order on alternating inset scenes */
+.scene--inset-reverse .scene--inset__image {
+  order: 1;
+}
+
+@media (min-width: 1024px) {
+  .scene--inset-reverse .scene--inset__image {
+    order: 2;
+  }
+
+  .scene--inset-reverse .scene--inset__text {
+    order: 1;
+  }
+}
