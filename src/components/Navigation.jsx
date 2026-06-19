@@ -39,7 +39,7 @@ export default function Navigation({ onRegisterClick, onHomeClick }) {
     <>
       <nav className={`${styles.nav} ${scrolled ? styles['nav-scrolled'] : ''}`} id="main-nav">
         <div className={`${styles.nav__inner} container`}>
-          <a href="#hero" className={styles.nav__logo} onClick={onHomeClick}>1Stonehaven</a>
+          <a href="#hero" className={styles.nav__logo} onClick={onHomeClick}>Stonehaven</a>
 
           <div className={styles.nav__links} id="nav-links">
             <NavAnchor href="#vision" onClick={onHomeClick}>The Vision</NavAnchor>
