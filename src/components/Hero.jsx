@@ -54,7 +54,7 @@ export default function Hero({ scrollYProgress, onRegisterClick }) {
       >
         <div className={styles['hero__title-wrap']} style={{ overflow: "hidden" }}>
           <motion.h1 className={styles.hero__title} variants={itemVars}>
-            1Stonehaven
+            Stonehaven
           </motion.h1>
         </div>
         <div style={{ overflow: "hidden" }}>
