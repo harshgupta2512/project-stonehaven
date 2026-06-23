@@ -8,7 +8,7 @@ export default function Footer({ onPageChange }) {
         <div className={styles.footer__grid}>
           
           <div className={styles.footer__brand}>
-            <h2 className={styles['footer__brand-name']}>1Stonehaven</h2>
+            <h2 className={styles['footer__brand-name']}>Stonehaven</h2>
             <p className={styles['footer__brand-sub']}>By Birch and Stone</p>
             <div className={styles.footer__socials}>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.footer__social} data-cursor="social">

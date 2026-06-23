@@ -1,14 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import L from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup, Polyline, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polyline, Polygon, useMap, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import styles from './Location.module.css';
 
 const STONEHAVEN = [-37.8745375, 145.0605637];
+const LOT_BOUNDARY = [
+  [-37.87445, 145.06045],
+  [-37.87435, 145.06075],
+  [-37.87462, 145.06085],
+  [-37.87472, 145.06055]
+];
 
 const CATEGORIES = {
-  project:   { label: '1Stonehaven',   color: '#C5A880', icon: '🏠' },
+  project:   { label: 'Stonehaven',   color: '#C5A880', icon: '🏠' },
   food:      { label: 'Food & Drink',  color: '#E86452', icon: '🍽' },
   shopping:  { label: 'Shopping',      color: '#9B5DE5', icon: '🛍' },
   parks:     { label: 'Parks & Rec',   color: '#4CAF50', icon: '🌿' },
@@ -59,8 +65,8 @@ const AMENITY_PILLS = [
 const projectIcon = L.divIcon({
   className: '',
   html: `<div class="sh-thumb">
-           <img src="images/B&S_CAM_7_Exterior_Front.webp" alt="1Stonehaven" />
-           <div class="sh-thumb-label">1STONEHAVEN</div>
+           <img src="images/facade-front.webp" alt="Stonehaven" />
+           <div class="sh-thumb-label">STONEHAVEN</div>
          </div>`,
   iconSize: [120, 90],
   iconAnchor: [60, 100],
@@ -231,7 +237,7 @@ export default function Location() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <span className={styles.label}>Your Neighbourhood</span>
+          <span className="section-label section-label--centered">Your Neighbourhood</span>
           <h2 className={styles.heading}>
             Malvern East — leafy streets<br />and effortless connection.
           </h2>
@@ -281,10 +287,22 @@ export default function Location() {
             {/* Pulsing project location marker */}
             <Marker position={STONEHAVEN} icon={projectIcon}>
               <Popup>
-                <div className="sh-popup-title">1STONEHAVEN</div>
+                <div className="sh-popup-title">STONEHAVEN</div>
                 <div className="sh-popup-sub">1 Stonehaven Avenue, Malvern East</div>
               </Popup>
             </Marker>
+
+            {/* Lot boundary area highlight */}
+            <Polygon 
+              positions={LOT_BOUNDARY}
+              pathOptions={{
+                color: '#C5A880',
+                fillColor: '#C5A880',
+                fillOpacity: 0.25,
+                weight: 2,
+                dashArray: '4, 4'
+              }}
+            />
 
 
 

@@ -12,22 +12,22 @@ const kitchenItems = [
 ];
 
 const bathroomItems = [
-  { id: 'tiles', icon: '◆', title: 'Feature Wall Tiles', desc: 'Full-height feature tiles to shower recess and behind vanity with premium stone-look finish', dot: { top: '45%', left: '9%' } },
-  { id: 'vanity', icon: '▫', title: 'Floating Vanity Unit', desc: 'Custom floating vanity in matching timber-look joinery with soft-close drawers and stone benchtop', dot: { top: '80%', left: '82%' } },
-  { id: 'tapware', icon: '○', title: 'Brushed Nickel Tapware', desc: 'Elysian brushed nickel basin mixer, shower set, and bath spout throughout by Reece', dot: { top: '68%', left: '95%' } },
-  { id: 'mirror', icon: '✧', title: 'Frameless Mirror Cabinet', desc: 'Recessed mirror cabinet with integrated LED lighting and demister pad to master ensuite', dot: { top: '30%', left: '97%' } },
+  { id: 'tiles', icon: '◆', title: 'Feature Wall Tiles', desc: 'Full-height Venetian stone-look feature tiles to shower recess and feature wall with premium textured finish', dot: { top: '38%', left: '8%' } },
+  { id: 'vanity', icon: '▫', title: 'Floating Vanity Unit', desc: 'Custom floating double-basin vanity in timber-look joinery with stone benchtop and soft-close drawers', dot: { top: '72%', left: '80%' } },
+  { id: 'tapware', icon: '○', title: 'Brushed Brass Tapware', desc: 'Aged brushed brass basin mixers, shower rose, and freestanding bath filler throughout — Reece Elysian collection', dot: { top: '42%', left: '22%' } },
+  { id: 'mirror', icon: '✧', title: 'Freestanding Bathtub', desc: 'Luxe oval freestanding bathtub in gloss white with brushed brass floor-mounted filler and hand shower', dot: { top: '78%', left: '44%' } },
 ];
 
 const livingItems = [
-  { id: 'flooring', icon: '◆', title: 'Engineered Timber Flooring', desc: 'Premium wide-board engineered timber flooring throughout all living areas and bedrooms', dot: { top: '90%', left: '50%' } },
-  { id: 'glazing', icon: '▫', title: 'Floor-to-Ceiling Glazing', desc: 'Oversized aluminium-framed sliding doors with low-E glass for thermal performance and natural light', dot: { top: '35%', left: '72%' } },
-  { id: 'climate', icon: '✦', title: 'Ducted Climate Control', desc: 'Zoned ducted heating and refrigerated cooling system with smart thermostat control throughout', dot: { top: '8%', left: '40%' } },
-  { id: 'wine', icon: '✧', title: 'Vintec Wine Cabinet', desc: 'Integrated Vintec premium wine cabinet with temperature-controlled dual-zone storage', dot: { top: '48%', left: '16%' } },
+  { id: 'flooring', icon: '◆', title: 'Chevron Timber Flooring', desc: 'Premium wide-board engineered oak flooring in a bespoke chevron pattern throughout all living areas', dot: { top: '85%', left: '42%' } },
+  { id: 'glazing', icon: '▫', title: 'Floor-to-Ceiling Glazing', desc: 'Oversized black aluminium-framed sliding doors with low-E glass for thermal performance and abundant natural light', dot: { top: '42%', left: '7%' } },
+  { id: 'climate', icon: '✦', title: 'Ducted Climate Control', desc: 'Zoned ducted heating and refrigerated cooling with smart thermostat — fully concealed throughout the ceiling', dot: { top: '8%', left: '28%' } },
+  { id: 'fireplace', icon: '✧', title: 'Linear Gas Fireplace', desc: 'Escea DX1500 linear gas fireplace set within a sculptural plaster feature wall — the centrepiece of every living room', dot: { top: '55%', left: '58%' } },
 ];
 
 const TABS = {
   kitchen: { label: 'Kitchen', items: kitchenItems, image: 'images/1A kitchen_V3_1.webp' },
-  bathroom: { label: 'Bathrooms', items: bathroomItems, image: 'images/bathroom-warm.webp' },
+  bathroom: { label: 'Bathrooms', items: bathroomItems, image: 'images/Master Ensuit_cam_3_Day view.webp' },
   living: { label: 'Living & Exterior', items: livingItems, image: 'images/1A_Living & dining_V3_1.webp' }
 };
 
@@ -89,7 +89,7 @@ export default function Inclusions() {
           <span className="section-label section-label--centered">Premium Inclusions</span>
           <h2 className="section-heading section-heading--dark" style={{ textAlign: "center" }}>Luxury comes standard.</h2>
           <p className="section-body" style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto" }}>
-            Every 1Stonehaven residence is delivered with a curated selection of premium brands and finishes — no upgrades required.
+            Every Stonehaven residence is delivered with a curated selection of premium brands and finishes — no upgrades required.
           </p>
         </motion.div>
 

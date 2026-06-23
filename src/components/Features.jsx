@@ -25,7 +25,7 @@ export default function Features() {
       num: "01",
       title: "Architectural Independence",
       sub: "No Body Corporate",
-      desc: "Live with complete autonomy. 1Stonehaven features just two boutique residences, each possessing its own distinct identity. Torrens Title ensures no body corporate fees and no shared walls."
+      desc: "Live with complete autonomy. Stonehaven features just two boutique residences, each possessing its own distinct identity. Torrens Title ensures no body corporate fees and no shared walls."
     },
     {
       num: "02",

@@ -46,7 +46,7 @@ export default function Team() {
             </div>
             <span className={styles.team__role}>Developer</span>
             <h3 className={styles.team__firm}>Birch and Stone</h3>
-            <p className={styles.team__desc}>Boutique developer behind 1Stonehaven — bringing together the best collaborators to deliver residences of enduring quality.</p>
+            <p className={styles.team__desc}>Boutique developer behind Stonehaven — bringing together the best collaborators to deliver residences of enduring quality.</p>
           </motion.div>
           <motion.div className={styles.team__card} variants={itemVars} whileHover={{ y: -8, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}>
             <div className={styles.team__logoWrap}>
@@ -54,7 +54,7 @@ export default function Team() {
             </div>
             <span className={styles.team__role}>Architect</span>
             <h3 className={styles.team__firm}>Wardle Design</h3>
-            <p className={styles.team__desc}>Architectural practice renowned for design that is contextual, material-led, and deeply considered in every detail.</p>
+            <p className={styles.team__desc}>Alex Caruana-Brown is the lead architect from Wardle Design responsible for the planning and design of the Stonehaven Residences project.</p>
           </motion.div>
           <motion.div className={styles.team__card} variants={itemVars} whileHover={{ y: -8, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}>
             <div className={styles.team__logoWrap}>
@@ -71,6 +71,14 @@ export default function Team() {
             <span className={styles.team__role}>Landscape</span>
             <h3 className={styles.team__firm}>Adaptive Landscape Design</h3>
             <p className={styles.team__desc}>Landscape architects creating outdoor spaces that complement the architecture and honour the site's natural character.</p>
+          </motion.div>
+          <motion.div className={styles.team__card} variants={itemVars} whileHover={{ y: -8, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}>
+            <div className={styles.team__logoWrap}>
+              <img src="images/rtedgar_logo_cropped.png" alt="RT Edgar" className={styles.team__logo} />
+            </div>
+            <span className={styles.team__role}>Real Estate</span>
+            <h3 className={styles.team__firm}>RT Edgar</h3>
+            <p className={styles.team__desc}>Appointed sales agency representing Stonehaven, renowned for marketing Melbourne's most premium residential properties.</p>
           </motion.div>
         </motion.div>
       </div>

@@ -22,7 +22,7 @@ export default function Vision() {
             <span className="section-label">The Vision</span>
             <h2 className="section-heading section-heading--dark">A rare debut in<br/>Melbourne's east</h2>
             <p className="section-body">
-              1Stonehaven, an exclusive release of two luxury residences at 1Stonehaven Avenue, Malvern East. Marking Birch and Stone's first project, this limited collection introduces a new vision for luxurious modern living in one of Melbourne's most established eastern suburbs.
+              Stonehaven, an exclusive release of two luxury residences at 1Stonehaven Avenue, Malvern East. Marking Birch and Stone's first project, this limited collection introduces a new vision for luxurious modern living in one of Melbourne's most established eastern suburbs.
             </p>
             <p className="section-body" style={{ marginTop: "var(--space-sm)" }}>
               From the street, 1Stonehaven Avenue presents a refined and memorable presence. Warm timber-look vertical detailing, stone-inspired textures, smooth rendered forms, broad glazing and softly curved elements create a facade that feels composed, elegant and enduring.

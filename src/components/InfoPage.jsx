@@ -62,7 +62,7 @@ export default function InfoPage({ type, onClose }) {
                   We will only use your personal data when the law allows us to. Most commonly, we will use your personal data to:
                 </p>
                 <ul>
-                  <li>Provide information to you regarding 1Stonehaven and future Birch and Stone developments.</li>
+                  <li>Provide information to you regarding Stonehaven and future Birch and Stone developments.</li>
                   <li>Enable our selling agents, <strong>RT Edgar</strong>, to contact you regarding availability and specifications of the residences.</li>
                   <li>Improve our marketing and website user experience.</li>
                 </ul>
@@ -135,7 +135,7 @@ export default function InfoPage({ type, onClose }) {
               <section className={styles.infoPage__section}>
                 <h2>5. Real Estate Agent Details</h2>
                 <p>
-                  The appointed sales agency for 1Stonehaven is <strong>RT Edgar</strong>. Any representations or negotiations made by the selling agents are subject to the terms of the Contract of Sale.
+                  The appointed sales agency for Stonehaven is <strong>RT Edgar</strong>. Any representations or negotiations made by the selling agents are subject to the terms of the Contract of Sale.
                 </p>
               </section>
 

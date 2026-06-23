@@ -160,6 +160,7 @@
   z-index: 20;
 }
 
+/* Tooltip above the dot (when dot is in the bottom half of the image) */
 .inclusions__tooltip--above {
   top: auto !important;
   bottom: 100% !important;
@@ -167,15 +168,17 @@
   margin-bottom: 16px !important;
 }
 
+/* Dot is on the right edge — anchor tooltip to the right of dot, expand left */
 .inclusions__tooltip--right {
   left: auto !important;
-  right: 50% !important;
-  transform: translateX(16px) !important;
+  right: 0 !important;
+  transform: translateX(8px) !important;
 }
 
+/* Dot is on the left edge — anchor tooltip to the left of dot, expand right */
 .inclusions__tooltip--left {
-  left: 50% !important;
-  transform: translateX(-16px) !important;
+  left: 0 !important;
+  transform: translateX(-8px) !important;
 }
 
 .tooltip__header {

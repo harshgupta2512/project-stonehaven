@@ -44,7 +44,7 @@ export default function Register() {
           >
             <h2 className="section-heading section-heading--light">Register<br/>Interest</h2>
             <p className="section-body section-body--inverse">
-              1Stonehaven is a limited offering of just two bespoke residences. Register your details below to receive project updates, floor plans, and early purchasing opportunities.
+              Stonehaven is a limited offering of just two bespoke residences. Register your details below to receive project updates, floor plans, and early purchasing opportunities.
             </p>
           </motion.div>
 
@@ -123,7 +123,7 @@ export default function Register() {
                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                   </svg>
                   <h3>Thank you for your interest</h3>
-                  <p>We have received your details and will be in touch shortly with more information about 1Stonehaven.</p>
+                  <p>We have received your details and will be in touch shortly with more information about Stonehaven.</p>
                 </motion.div>
               )}
             </AnimatePresence>

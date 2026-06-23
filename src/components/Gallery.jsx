@@ -3,16 +3,24 @@ import { motion, AnimatePresence } from 'motion/react';
 import styles from './Gallery.module.css';
 
 const galleryItems = [
-  { id: 1,  src: "images/B&S_CAM_7_Exterior_Front.webp",       title: "Street Facade",    label: "Exterior", category: "Exterior" },
+  { id: 1,  src: "images/facade-front.webp",                    title: "Street Facade",    label: "Exterior", category: "Exterior" },
   { id: 2,  src: "images/Single house cam_2 B&S (1A).webp",     title: "Residence 1A",     label: "Exterior", category: "Residence 1A" },
   { id: 3,  src: "images/Single house cam_1 B&S (1B).webp",     title: "Residence 1B",     label: "Exterior", category: "Residence 1B" },
   { id: 4,  src: "images/1A kitchen_V3_1.webp",                 title: "Kitchen 1A",       label: "Interior", category: "Residence 1A" },
   { id: 5,  src: "images/1B kitchen_V2_1.webp",                 title: "Kitchen 1B",       label: "Interior", category: "Residence 1B" },
   { id: 6,  src: "images/1A_Living & dining_V3_1.webp",         title: "Living & Dining",  label: "Interior", category: "Residence 1A" },
   { id: 7,  src: "images/1B_Living & dining_V2_1.webp",         title: "Living & Dining",  label: "Interior", category: "Residence 1B" },
-  { id: 8,  src: "images/bathroom-warm.webp",                   title: "Master Ensuite",   label: "Interior", category: "Residence 1A" },
-  { id: 9,  src: "images/bathroom-cool.webp",                   title: "Master Ensuite",   label: "Interior", category: "Residence 1B" },
+  { id: 8,  src: "images/Master Ensuit_cam_3_Day view.webp",    title: "Master Ensuite",   label: "Interior", category: "Residence 1A" },
+  { id: 9,  src: "images/Master Ensuit_cam_2_Night view_opt.webp", title: "Master Ensuite",   label: "Interior", category: "Residence 1B" },
   { id: 10, src: "images/facade-angle.webp",                    title: "Architectural Detail", label: "Exterior", category: "Exterior" },
+  { id: 11, src: "images/Stonehaven_pool_cam_1_Day.webp",       title: "Swimming Pool (Day)", label: "Exterior", category: "Residence 1A" },
+  { id: 12, src: "images/Stonehaven_pool_cam_1_Day.webp",       title: "Swimming Pool (Day)", label: "Exterior", category: "Residence 1B" },
+  { id: 13, src: "images/Stonehaven_pool_cam_1_Night.webp",     title: "Swimming Pool (Night)", label: "Exterior", category: "Residence 1A" },
+  { id: 14, src: "images/Stonehaven_pool_cam_1_Night.webp",     title: "Swimming Pool (Night)", label: "Exterior", category: "Residence 1B" },
+  { id: 15, src: "images/Master bedroom_cam 3_1A.webp",         title: "Master Bedroom",   label: "Interior", category: "Residence 1A" },
+  { id: 16, src: "images/Master bedroom_cam 3_1A.webp",         title: "Master Bedroom",   label: "Interior", category: "Residence 1B" },
+  { id: 17, src: "images/Master bedroom_cam 4_1A.webp",         title: "Master Bedroom (Angle)", label: "Interior", category: "Residence 1A" },
+  { id: 18, src: "images/Master bedroom_cam 4_1A.webp",         title: "Master Bedroom (Angle)", label: "Interior", category: "Residence 1B" },
 ];
 
 export default function Gallery() {

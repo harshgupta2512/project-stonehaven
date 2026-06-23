@@ -305,7 +305,13 @@ html {
 }
 
 .section-label--light {
-  color: var(--color-accent);
+  color: var(--color-text-inverse);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.section-label--light::after {
+  background-color: var(--color-text-inverse) !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .section-label--centered {
