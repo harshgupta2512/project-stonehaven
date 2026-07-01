@@ -28,23 +28,12 @@
 @media (min-width: 768px) {
   .team__grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--space-md);
     overflow-x: visible;
     scroll-snap-type: none;
     padding: 0;
     margin: 0;
-  }
-
-  .team__card:nth-child(1),
-  .team__card:nth-child(2),
-  .team__card:nth-child(3) {
-    grid-column: span 2;
-  }
-
-  .team__card:nth-child(4),
-  .team__card:nth-child(5) {
-    grid-column: span 3;
   }
 }
 

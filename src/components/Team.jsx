@@ -80,6 +80,14 @@ export default function Team() {
             <h3 className={styles.team__firm}>RT Edgar</h3>
             <p className={styles.team__desc}>Appointed sales agency representing Stonehaven, renowned for marketing Melbourne's most premium residential properties.</p>
           </motion.div>
+          <motion.div className={styles.team__card} variants={itemVars} whileHover={{ y: -8, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}>
+            <div className={styles.team__logoWrap}>
+              <span className={styles.team__devLogo}>TBA</span>
+            </div>
+            <span className={styles.team__role}>Builder</span>
+            <h3 className={styles.team__firm}>To Be Announced</h3>
+            <p className={styles.team__desc}>A premium luxury home builder will be appointed to execute the architectural vision of Stonehaven to the highest standard.</p>
+          </motion.div>
         </motion.div>
       </div>
     </section>

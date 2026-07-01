@@ -30,7 +30,7 @@ export default function Features() {
     {
       num: "02",
       title: "Turn-Key Package",
-      sub: "Full Turnkey House & Land",
+      sub: "Full Turnkey Fixed Price",
       desc: "A fixed-price turnkey delivery. From premium landscaping, secure fencing, and concrete driveways to luxury interior finishes — move in with absolute peace of mind."
     },
     {

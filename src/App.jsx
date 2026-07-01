@@ -8,6 +8,7 @@ import Gallery from './components/Gallery';
 import Features from './components/Features';
 import Inclusions from './components/Inclusions';
 import Location from './components/Location';
+import Lifestyle from './components/Lifestyle';
 import Team from './components/Team';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
@@ -44,6 +45,7 @@ function App() {
             <Inclusions />
             <Features />
             <Gallery />
+            <Lifestyle />
             <Location />
             <Team />
           </>

@@ -3,26 +3,33 @@ import { motion, AnimatePresence } from 'motion/react';
 import styles from './Inclusions.module.css';
 
 const kitchenItems = [
-  { id: 'benchtop', icon: '◆', title: 'CDK Stone Benchtops', desc: 'Taj Mahal stone — 20mm to back bench and WIP, 80mm to island with waterfall end and eased edge profile', dot: { top: '64%', left: '56%' } },
-  { id: 'joinery', icon: '▫', title: 'Polytec Joinery', desc: 'Boston Oak 30mm slim shaker vertical panel to all interior joinery (light scheme) or Perugian Walnut (dark scheme)', dot: { top: '26%', left: '32%' } },
-  { id: 'hardware', icon: '✦', title: 'Lo & Co Aged Brass Hardware', desc: 'Tubby Pulled Aged Brass handles — 212mm vertical to doors, horizontal to drawers, 340mm to pantry and tall doors', dot: { top: '58%', left: '77.5%' } },
-  { id: 'pendant', icon: '✧', title: 'Beacon Helix Bar Pendant', desc: '5-light bar pendant in textured chalk with frosted opal glass, centred over kitchen island', dot: { top: '20%', left: '50%' } },
-  { id: 'sink', icon: '○', title: 'Walk-in Pantry & Double Bowl Sink', desc: 'Merro Hugo stainless steel undermount double bowl sink to WIP, Elysian brushed nickel mixer by Reece', dot: { top: '60%', left: '41.5%' } },
-  { id: 'flooring', icon: '▰', title: 'Engineered Timber Flooring', desc: 'Premium oak engineered timber flooring in a custom chevron pattern throughout the living and kitchen areas', dot: { top: '88%', left: '25%' } },
+  { id: 'fridge', icon: '◆', title: 'Integrated refrigerator', desc: 'KS 7793 D by Miele', dot: { top: '40%', left: '27.5%' } },
+  { id: 'freezer', icon: '▫', title: 'Integrated freezer', desc: 'FNS 7794 E Integrated freezer by Miele', dot: { top: '56%', left: '23%' } },
+  { id: 'wine', icon: '✦', title: 'Premium Wine Cabinet', desc: 'Vintec PREMIUM 198 Bottle Wine Cabinet with Fixed Shelves in Black Alloy Finish by Vintec', dot: { top: '69%', left: '17%' } },
+  { id: 'sink', icon: '✧', title: 'Maris Single Bowl Kitchen Sink', desc: 'Polar White by Franke', dot: { top: '61%', left: '40.5%' } },
+  { id: 'mixer', icon: '○', title: 'Elysian Commercial Pull-Out Kitchen Mixer', desc: 'by Miele', dot: { top: '54%', left: '42%' } },
+  { id: 'cooktop', icon: '▰', title: 'Induction cooktop', desc: 'Black Elegant glass ceramic surface by Miele', dot: { top: '57.5%', left: '47.5%' } },
+  { id: 'rangehood', icon: '△', title: 'Built-in Rangehoods', desc: 'AP03 DA 2390 Extractor unit in Stainless Steel finish by Miele', dot: { top: '48%', left: '52%' } },
+  { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'H 2457 BP Obsidian Black Oven by Miele', dot: { top: '41%', left: '72.5%' } },
+  { id: 'board', icon: '▫', title: 'Decorative board', desc: 'Cafe Oak in Matt Finish by Polytec', dot: { top: '20%', left: '72.5%' } },
+  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone Matt Lacquered finish in Platinum by Havwoods', dot: { top: '80%', left: '90.5%' } },
 ];
 
 const bathroomItems = [
-  { id: 'tiles', icon: '◆', title: 'Feature Wall Tiles', desc: 'Full-height Venetian stone-look feature tiles to shower recess and feature wall with premium textured finish', dot: { top: '38%', left: '8%' } },
-  { id: 'vanity', icon: '▫', title: 'Floating Vanity Unit', desc: 'Custom floating double-basin vanity in timber-look joinery with stone benchtop and soft-close drawers', dot: { top: '72%', left: '80%' } },
-  { id: 'tapware', icon: '○', title: 'Brushed Brass Tapware', desc: 'Aged brushed brass basin mixers, shower rose, and freestanding bath filler throughout — Reece Elysian collection', dot: { top: '42%', left: '22%' } },
-  { id: 'mirror', icon: '✧', title: 'Freestanding Bathtub', desc: 'Luxe oval freestanding bathtub in gloss white with brushed brass floor-mounted filler and hand shower', dot: { top: '78%', left: '44%' } },
+  { id: 'shower', icon: '◆', title: 'Head Round Shower', desc: 'Brushed Gunmetal by ABI Interiors', dot: { top: '28%', left: '17%' } },
+  { id: 'tiles', icon: '▫', title: 'Zukuri Pearl Mosaic Tile', desc: 'Pearl Glaze by Tiento', dot: { top: '53%', left: '14.5%' } },
+  { id: 'filler', icon: '✦', title: 'Floor Mounted Bath Filler', desc: 'Brushed Gunmetal by ABI Interiors', dot: { top: '80%', left: '34.5%' } },
+  { id: 'tub', icon: '✧', title: 'Freestanding Bath Tub', desc: 'Cremona 1530 Matte White Round Freestanding Bath Tub in Matte White by Acqua Bathrooms', dot: { top: '80%', left: '45%' } },
+  { id: 'basin', icon: '○', title: 'Undercounter Basin', desc: 'Zuri Undercounter Pill Basin in Matte White by ABI Interiors', dot: { top: '62%', left: '66.5%' } },
+  { id: 'light', icon: '▰', title: 'Loop Fusion Wall Light', desc: 'by Nook Collections', dot: { top: '36%', left: '68%' } },
+  { id: 'door', icon: '△', title: 'Privacy Door Handle', desc: 'Rochester in Brushed Gunmetal by Manovella', dot: { top: '62%', left: '86.5%' } },
 ];
 
 const livingItems = [
-  { id: 'flooring', icon: '◆', title: 'Chevron Timber Flooring', desc: 'Premium wide-board engineered oak flooring in a bespoke chevron pattern throughout all living areas', dot: { top: '85%', left: '42%' } },
-  { id: 'glazing', icon: '▫', title: 'Floor-to-Ceiling Glazing', desc: 'Oversized black aluminium-framed sliding doors with low-E glass for thermal performance and abundant natural light', dot: { top: '42%', left: '7%' } },
-  { id: 'climate', icon: '✦', title: 'Ducted Climate Control', desc: 'Zoned ducted heating and refrigerated cooling with smart thermostat — fully concealed throughout the ceiling', dot: { top: '8%', left: '28%' } },
-  { id: 'fireplace', icon: '✧', title: 'Linear Gas Fireplace', desc: 'Escea DX1500 linear gas fireplace set within a sculptural plaster feature wall — the centrepiece of every living room', dot: { top: '55%', left: '58%' } },
+  { id: 'downlight', icon: '◆', title: 'Downlight', desc: 'Surface 150mm LED Tri-Colour Surface Mounted Downlight in White by Lucci', dot: { top: '14%', left: '49%' } },
+  { id: 'carpet', icon: '▫', title: 'Textured Tufted Loop Pile Carpet', desc: 'Ayrton Monaco by EC Carpets', dot: { top: '91%', left: '10.5%' } },
+  { id: 'fireplace', icon: '✦', title: 'Electric Fireplace', desc: 'VisionLINE View Electric Fireplace - Single Front Sided in black by Vision Line', dot: { top: '56.5%', left: '54.5%' } },
+  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone Matt Lacquered finish in Platinum by Havwoods', dot: { top: '88%', left: '84%' } },
 ];
 
 const TABS = {

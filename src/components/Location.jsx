@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'motion/react';
 import L from 'leaflet';
-import { MapContainer, TileLayer, Marker, Popup, Polyline, Polygon, useMap, useMapEvents } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Polyline, Polygon, Tooltip, useMap, useMapEvents } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import styles from './Location.module.css';
 
@@ -284,25 +284,27 @@ export default function Location() {
             <MapController activePoi={activePoi} activeCoords={routeCoords} />
             <MapEventsHandler onClear={handleClearRoute} />
 
-            {/* Pulsing project location marker */}
-            <Marker position={STONEHAVEN} icon={projectIcon}>
-              <Popup>
-                <div className="sh-popup-title">STONEHAVEN</div>
-                <div className="sh-popup-sub">1 Stonehaven Avenue, Malvern East</div>
-              </Popup>
-            </Marker>
-
-            {/* Lot boundary area highlight */}
+            {/* Project Site Polygon */}
             <Polygon 
               positions={LOT_BOUNDARY}
               pathOptions={{
                 color: '#C5A880',
                 fillColor: '#C5A880',
-                fillOpacity: 0.25,
-                weight: 2,
-                dashArray: '4, 4'
+                fillOpacity: 0.45,
+                weight: 3,
               }}
-            />
+            >
+              <Tooltip direction="top" offset={[0, -10]} opacity={1} permanent>
+                <div style={{ textAlign: 'center', margin: 0 }}>
+                  <strong>STONEHAVEN</strong><br/>
+                  <span style={{ fontSize: '10px' }}>1 Stonehaven Ave</span>
+                </div>
+              </Tooltip>
+              <Popup>
+                <div className="sh-popup-title">STONEHAVEN</div>
+                <div className="sh-popup-sub">1 Stonehaven Avenue, Malvern East</div>
+              </Popup>
+            </Polygon>
 
 
 
