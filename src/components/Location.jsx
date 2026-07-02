@@ -5,12 +5,12 @@ import { MapContainer, TileLayer, Marker, Popup, Polyline, Polygon, Tooltip, use
 import 'leaflet/dist/leaflet.css';
 import styles from './Location.module.css';
 
-const STONEHAVEN = [-37.8745375, 145.0605637];
+const STONEHAVEN = [-37.87453, 145.06049];
 const LOT_BOUNDARY = [
-  [-37.87445, 145.06045],
-  [-37.87435, 145.06075],
-  [-37.87462, 145.06085],
-  [-37.87472, 145.06055]
+  [-37.87435, 145.06035], // NW
+  [-37.87445, 145.06065], // NE
+  [-37.87468, 145.06058], // SE
+  [-37.87458, 145.06028]  // SW
 ];
 
 const CATEGORIES = {
@@ -290,23 +290,13 @@ export default function Location() {
               pathOptions={{
                 color: '#C5A880',
                 fillColor: '#C5A880',
-                fillOpacity: 0.45,
-                weight: 3,
+                fillOpacity: 0.3,
+                weight: 2,
               }}
-            >
-              <Tooltip direction="top" offset={[0, -10]} opacity={1} permanent>
-                <div style={{ textAlign: 'center', margin: 0 }}>
-                  <strong>STONEHAVEN</strong><br/>
-                  <span style={{ fontSize: '10px' }}>1 Stonehaven Ave</span>
-                </div>
-              </Tooltip>
-              <Popup>
-                <div className="sh-popup-title">STONEHAVEN</div>
-                <div className="sh-popup-sub">1 Stonehaven Avenue, Malvern East</div>
-              </Popup>
-            </Polygon>
+            />
 
-
+            {/* Project Image Marker */}
+            <Marker position={STONEHAVEN} icon={projectIcon} zIndexOffset={1000} />
 
             {/* POI markers */}
             {POIS.map((poi, idx) => {

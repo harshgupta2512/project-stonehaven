@@ -35,7 +35,7 @@ const livingItems = [
 const TABS = {
   kitchen: { label: 'Kitchen', items: kitchenItems, image: 'images/1A kitchen_V3_1.webp' },
   bathroom: { label: 'Bathrooms', items: bathroomItems, image: 'images/Master Ensuit_cam_3_Day view.webp' },
-  living: { label: 'Living & Exterior', items: livingItems, image: 'images/1A_Living & dining_V3_1.webp' }
+  living: { label: 'Living & Exterior', items: livingItems, image: 'images/1B_Living & dining_V2_1.webp' }
 };
 
 export default function Inclusions() {
