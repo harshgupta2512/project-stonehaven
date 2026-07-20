@@ -95,7 +95,7 @@ export default function InfoPage({ type, onClose }) {
                   If you have any questions about this privacy policy or our privacy practices, please contact us at:
                 </p>
                 <p className={styles.infoPage__contact}>
-                  <strong>Email:</strong> <a href="mailto:info@1stonehaven.com.au">info@1stonehaven.com.au</a>
+                  <strong>Email:</strong> <a href="mailto:Business@birchandstone.com.au">Business@birchandstone.com.au</a>
                 </p>
               </section>
             </>

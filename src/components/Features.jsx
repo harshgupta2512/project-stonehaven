@@ -43,7 +43,7 @@ export default function Features() {
       num: "04",
       title: "Singular Design",
       sub: "Never to be repeated",
-      desc: "Exclusivity defined. A custom architectural design never to be built again. Meticulously crafted specifically for 1Stonehaven Avenue. The architecture responds to the streetscape with a confidence and elegance that will never be replicated elsewhere."
+      desc: "Exclusivity defined. A custom architectural design never to be built again. Meticulously crafted specifically for Stonehaven Avenue. The architecture responds to the streetscape with a confidence and elegance that will never be replicated elsewhere."
     },
     {
       num: "05",

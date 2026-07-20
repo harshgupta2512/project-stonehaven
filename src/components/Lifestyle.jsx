@@ -8,6 +8,7 @@ const LIFESTYLE_IMAGES = [
   { url: 'images/lifestyle/198_Wattletree_Lifestyles038.jpg', alt: 'Wattletree Lifestyles', type: 'normal' },
   { url: 'images/lifestyle/MalvernValley_156.jpg', alt: 'Malvern Valley', type: 'normal' },
   { url: 'images/lifestyle/MalvernVillageLifestyles_027.jpg', alt: 'Malvern Village', type: 'normal' },
+  { url: 'images/lifestyle/images.jpg', alt: 'Grazia Restaurant', type: 'normal' },
   { url: 'images/lifestyle/198_Wattletree_Lifestyles067.jpg', alt: 'Cafe culture', type: 'normal' },
 ];
 

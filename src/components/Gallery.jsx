@@ -3,24 +3,20 @@ import { motion, AnimatePresence } from 'motion/react';
 import styles from './Gallery.module.css';
 
 const galleryItems = [
-  { id: 1,  src: "images/facade-front.webp",                    title: "Street Facade",    label: "Exterior", category: "Exterior" },
-  { id: 2,  src: "images/Single house cam_2 B&S (1A).webp",     title: "Residence 1",      label: "Exterior", category: "Residence 1" },
-  { id: 3,  src: "images/Single house cam_1 B&S (1B).webp",     title: "Residence 1A",     label: "Exterior", category: "Residence 1A" },
-  { id: 4,  src: "images/1A kitchen_V3_1.webp",                 title: "Kitchen 1",        label: "Interior", category: "Residence 1" },
-  { id: 5,  src: "images/1B kitchen_V2_1.webp",                 title: "Kitchen 1A",       label: "Interior", category: "Residence 1A" },
-  { id: 6,  src: "images/1A_Living & dining_V3_1.webp",         title: "Living & Dining",  label: "Interior", category: "Residence 1" },
-  { id: 7,  src: "images/1B_Living & dining_V2_1.webp",         title: "Living & Dining",  label: "Interior", category: "Residence 1A" },
-  { id: 8,  src: "images/Master Ensuit_cam_3_Day view.webp",    title: "Master Ensuite",   label: "Interior", category: "Residence 1" },
-  { id: 9,  src: "images/Master Ensuit_cam_2_Night view_opt.webp", title: "Master Ensuite",   label: "Interior", category: "Residence 1A" },
-  { id: 10, src: "images/facade-angle.webp",                    title: "Architectural Detail", label: "Exterior", category: "Exterior" },
-  { id: 11, src: "images/Stonehaven_pool_cam_1_Day.webp",       title: "Swimming Pool (Day)", label: "Exterior", category: "Residence 1" },
-  { id: 12, src: "images/Stonehaven_pool_cam_1_Day.webp",       title: "Swimming Pool (Day)", label: "Exterior", category: "Residence 1A" },
-  { id: 13, src: "images/Stonehaven_pool_cam_1_Night.webp",     title: "Swimming Pool (Night)", label: "Exterior", category: "Residence 1" },
-  { id: 14, src: "images/Stonehaven_pool_cam_1_Night.webp",     title: "Swimming Pool (Night)", label: "Exterior", category: "Residence 1A" },
-  { id: 15, src: "images/Master bedroom_cam 3_1A.webp",         title: "Master Bedroom",   label: "Interior", category: "Residence 1" },
-  { id: 16, src: "images/Master bedroom_cam 3_1A.webp",         title: "Master Bedroom",   label: "Interior", category: "Residence 1A" },
-  { id: 17, src: "images/Master bedroom_cam 4_1A.webp",         title: "Master Bedroom (Angle)", label: "Interior", category: "Residence 1" },
-  { id: 18, src: "images/Master bedroom_cam 4_1A.webp",         title: "Master Bedroom (Angle)", label: "Interior", category: "Residence 1A" },
+  { id: 1,  src: "images/Stonehaven_Cam_1_Exterior.jpg",     title: "Street Facade 1",   label: "Exterior", category: "Exterior" },
+  { id: 2,  src: "images/Stonehaven_Cam_2_Exterior.jpg",     title: "Street Facade 2",   label: "Exterior", category: "Exterior" },
+  { id: 3,  src: "images/Single house cam_1 B&S (1).jpeg",   title: "Residence 1",       label: "Exterior", category: "Residence 1" },
+  { id: 4,  src: "images/Single house cam_1 B&S (1A).jpg",   title: "Residence 1A",      label: "Exterior", category: "Residence 1A" },
+  { id: 5,  src: "images/1 kitchen_1.jpg",                   title: "Residence 1 Kitchen", label: "Interior", category: "Residence 1" },
+  { id: 6,  src: "images/1A kitchen.jpg",                    title: "Residence 1A Kitchen", label: "Interior", category: "Residence 1A" },
+  { id: 7,  src: "images/1_Living & dining.jpg",             title: "Living & Dining",   label: "Interior", category: "Residence 1" },
+  { id: 8,  src: "images/1A_Living & dining.jpg",            title: "Living & Dining",   label: "Interior", category: "Residence 1A" },
+  { id: 9,  src: "images/Master Ensuit_cam_1_1.jpg",         title: "Master Ensuite",    label: "Interior", category: "Residence 1" },
+  { id: 10, src: "images/Master Ensuit_cam_2_1A.jpg",        title: "Master Ensuite",    label: "Interior", category: "Residence 1A" },
+  { id: 11, src: "images/Master bedroom_cam 1_1.jpg",        title: "Master Bedroom",    label: "Interior", category: "Residence 1" },
+  { id: 12, src: "images/Master bedroom_cam 2_1.jpg",        title: "Master Bedroom",    label: "Interior", category: "Residence 1A" },
+  { id: 13, src: "images/Cam_2_wardrobe.jpg",                title: "Wardrobe",          label: "Interior", category: "Residence 1" },
+  { id: 14, src: "images/Cam_2_wardrobe.jpg",                title: "Wardrobe",          label: "Interior", category: "Residence 1A" },
 ];
 
 export default function Gallery() {

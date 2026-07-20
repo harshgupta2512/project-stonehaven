@@ -255,7 +255,7 @@ export default function Location() {
         >
           <span style={{ fontSize: '14px' }}>📍</span>
           <span className={styles.addressText}>
-            1 Stonehaven Avenue, Malvern East VIC 3145
+            Stonehaven Avenue, Malvern East VIC 3145
           </span>
         </motion.div>
 

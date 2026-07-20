@@ -36,7 +36,7 @@ export default function Hero({ scrollYProgress, onRegisterClick }) {
           muted
           loop
           playsInline
-          poster="images/facade-front.webp"
+          poster="images/Stonehaven_Cam_1_Exterior.jpg"
           className={styles.hero__video}
         >
           <source src="Videos/Hf 20260603 181317 2Bb3d50f-9354-40Aa-B986-6F5803d9fe3b.webm" type="video/webm" />
