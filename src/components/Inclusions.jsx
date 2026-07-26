@@ -4,73 +4,73 @@ import styles from './Inclusions.module.css';
 
 // --- Dark Theme (1A / Cafe Oak) ---
 const darkKitchenItems = [
-  { id: 'fridge', icon: '◆', title: 'Integrated refrigerator', desc: 'by Miele', dot: { top: '40%', left: '27.5%' } },
-  { id: 'freezer', icon: '▫', title: 'Integrated freezer', desc: 'by Miele', dot: { top: '56%', left: '23%' } },
-  { id: 'wine', icon: '✦', title: 'Premium Wine Cabinet', desc: 'by Vintec', dot: { top: '69%', left: '17%' } },
+  { id: 'fridge', icon: '◆', title: 'Integrated refrigerator', desc: 'by Miele', dot: { top: '49.8%', left: '28.4%' } },
+  { id: 'freezer', icon: '▫', title: 'Integrated freezer', desc: 'by Miele', dot: { top: '50.0%', left: '22.6%' } },
+  { id: 'wine', icon: '✦', title: 'Premium Wine Cabinet', desc: 'by Vintec', dot: { top: '54.8%', left: '17.1%' } },
   { id: 'sink', icon: '✧', title: 'Single Bowl Kitchen Sink', desc: 'by Franke', dot: { top: '61%', left: '40.5%' } },
-  { id: 'mixer', icon: '○', title: 'Pull-Out Kitchen Mixer', desc: 'by Miele', dot: { top: '54%', left: '42%' } },
+  { id: 'mixer', icon: '○', title: 'Pull-Out Kitchen Mixer', desc: 'by Miele', dot: { top: '54.4%', left: '42.6%' } },
   { id: 'cooktop', icon: '▰', title: 'Induction cooktop', desc: 'by Miele', dot: { top: '57.5%', left: '47.5%' } },
-  { id: 'rangehood', icon: '△', title: 'Built-in Rangehood', desc: 'by Miele', dot: { top: '48%', left: '52%' } },
-  { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'by Miele', dot: { top: '41%', left: '72.5%' } },
-  { id: 'board', icon: '▫', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '20%', left: '72.5%' } },
-  { id: 'splashback', icon: '✦', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '35%', left: '35%' } },
-  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '80%', left: '90.5%' } },
+  { id: 'rangehood', icon: '△', title: 'Built-in Rangehood', desc: 'by Miele', dot: { top: '45.4%', left: '54.7%' } },
+  { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'by Miele', dot: { top: '51.3%', left: '74.1%' } },
+  { id: 'board', icon: '▫', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '26.2%', left: '75.1%' } },
+  { id: 'splashback', icon: '✦', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '38.3%', left: '37.3%' } },
+  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '82.4%', left: '80.2%' } },
 ];
 
 const darkBathroomItems = [
   { id: 'walltile', icon: '◆', title: 'Ivory Porcelain Tile', desc: 'by Massa Imports', dot: { top: '21%', left: '44%' } },
   { id: 'shower', icon: '▫', title: 'Finley Shower Rail Set', desc: 'Brushed Gunmetal by ABI interior', dot: { top: '27%', left: '33%' } },
   { id: 'mosaic', icon: '✦', title: 'Zukuri Pearl Mosaic Tile', desc: 'by Tiento', dot: { top: '55%', left: '15%' } },
-  { id: 'filler', icon: '✧', title: 'Floor Mounted Bath Filler', desc: 'Brushed Gunmetal by ABI Interiors', dot: { top: '81%', left: '47%' } },
+  { id: 'filler', icon: '✧', title: 'Floor Mounted Bath Filler', desc: 'Brushed Gunmetal by ABI Interiors', dot: { top: '58.8%', left: '49.9%' } },
   { id: 'tub', icon: '○', title: 'Freestanding Bath Tub', desc: 'Matte White Round', dot: { top: '82%', left: '55%' } },
-  { id: 'stone', icon: '▰', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '60%', left: '71%' } },
-  { id: 'basin', icon: '△', title: 'Undercounter Basin', desc: 'Pill Basin', dot: { top: '63%', left: '76%' } },
-  { id: 'drawer', icon: '◆', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '77%', left: '76%' } },
-  { id: 'tapware', icon: '▫', title: 'Lux Range', desc: 'by ABI interior', dot: { top: '60%', left: '81%' } },
-  { id: 'light', icon: '✦', title: 'Loop Fusion Wall Light', desc: 'by Nook Collections', dot: { top: '36%', left: '77%' } },
+  { id: 'stone', icon: '▰', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '58.7%', left: '70.8%' } },
+  { id: 'basin', icon: '△', title: 'Undercounter Basin', desc: 'Pill Basin', dot: { top: '60.8%', left: '77.3%' } },
+  { id: 'drawer', icon: '◆', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '70.9%', left: '83.9%' } },
+  { id: 'tapware', icon: '▫', title: 'Lux Range', desc: 'by ABI interior', dot: { top: '53.0%', left: '72.9%' } },
+  { id: 'light', icon: '✦', title: 'Loop Fusion Wall Light', desc: 'by Nook Collections', dot: { top: '38.6%', left: '78.1%' } },
 ];
 
 const darkLivingItems = [
-  { id: 'cabinet', icon: '◆', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '65%', left: '22%' } },
-  { id: 'stone', icon: '▫', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '62%', left: '39%' } },
-  { id: 'fireplace', icon: '✧', title: 'Electric Fireplace', desc: 'by VisionLINE', dot: { top: '54%', left: '54%' } },
-  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '88%', left: '84%' } },
+  { id: 'cabinet', icon: '◆', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '63.8%', left: '23.3%' } },
+  { id: 'stone', icon: '▫', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '59.4%', left: '43.9%' } },
+  { id: 'fireplace', icon: '✧', title: 'Electric Fireplace', desc: 'by VisionLINE', dot: { top: '57.4%', left: '60.5%' } },
+  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '78.2%', left: '76.8%' } },
 ];
 
 
 // --- Light Theme (1 / Ecru Oak) ---
 const lightKitchenItems = [
-  { id: 'fridge', icon: '◆', title: 'Integrated refrigerator', desc: 'by Miele', dot: { top: '40%', left: '27.5%' } },
-  { id: 'freezer', icon: '▫', title: 'Integrated freezer', desc: 'by Miele', dot: { top: '56%', left: '23%' } },
-  { id: 'wine', icon: '✦', title: 'Premium Wine Cabinet', desc: 'by Vintec', dot: { top: '69%', left: '17%' } },
+  { id: 'fridge', icon: '◆', title: 'Integrated refrigerator', desc: 'by Miele', dot: { top: '49.8%', left: '28.4%' } },
+  { id: 'freezer', icon: '▫', title: 'Integrated freezer', desc: 'by Miele', dot: { top: '50.0%', left: '22.6%' } },
+  { id: 'wine', icon: '✦', title: 'Premium Wine Cabinet', desc: 'by Vintec', dot: { top: '53.9%', left: '15.8%' } },
   { id: 'sink', icon: '✧', title: 'Single Bowl Kitchen Sink', desc: 'by Franke', dot: { top: '61%', left: '40.5%' } },
-  { id: 'mixer', icon: '○', title: 'Pull-Out Kitchen Mixer', desc: 'by Miele', dot: { top: '54%', left: '42%' } },
+  { id: 'mixer', icon: '○', title: 'Pull-Out Kitchen Mixer', desc: 'by Miele', dot: { top: '54.4%', left: '39.1%' } },
   { id: 'cooktop', icon: '▰', title: 'Induction cooktop', desc: 'by Miele', dot: { top: '57.5%', left: '47.5%' } },
-  { id: 'rangehood', icon: '△', title: 'Built-in Rangehood', desc: 'by Miele', dot: { top: '48%', left: '52%' } },
-  { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'by Miele', dot: { top: '41%', left: '72.5%' } },
+  { id: 'rangehood', icon: '△', title: 'Built-in Rangehood', desc: 'by Miele', dot: { top: '44.7%', left: '52.8%' } },
+  { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'by Miele', dot: { top: '54.3%', left: '69.8%' } },
   { id: 'board', icon: '▫', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '20%', left: '72.5%' } },
-  { id: 'splashback', icon: '✦', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '35%', left: '35%' } },
-  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '80%', left: '90.5%' } },
+  { id: 'splashback', icon: '✦', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '38.3%', left: '37.3%' } },
+  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '82.4%', left: '80.2%' } },
 ];
 
 const lightBathroomItems = [
-  { id: 'walltile', icon: '◆', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '25%', left: '37%' } },
-  { id: 'shower', icon: '▫', title: 'Finley Shower Rail Set', desc: 'Brushed Brass by ABI interior', dot: { top: '28%', left: '30%' } },
+  { id: 'walltile', icon: '◆', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '30.8%', left: '41.5%' } },
+  { id: 'shower', icon: '▫', title: 'Finley Shower Rail Set', desc: 'Brushed Brass by ABI interior', dot: { top: '32.8%', left: '29.3%' } },
   { id: 'mosaic', icon: '✦', title: 'Zukuri Pearl Mosaic Tile', desc: 'by Tiento', dot: { top: '53%', left: '14.5%' } },
-  { id: 'filler', icon: '✧', title: 'Floor Mounted Bath Filler', desc: 'Brushed Brass by ABI Interiors', dot: { top: '80%', left: '40%' } },
-  { id: 'tub', icon: '○', title: 'Freestanding Bath Tub', desc: 'Matte White Round', dot: { top: '80%', left: '47%' } },
-  { id: 'stone', icon: '▰', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '63%', left: '75%' } },
-  { id: 'basin', icon: '△', title: 'Undercounter Basin', desc: 'Pill Basin', dot: { top: '66%', left: '79%' } },
-  { id: 'drawer', icon: '◆', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '88%', left: '83%' } },
+  { id: 'filler', icon: '✧', title: 'Floor Mounted Bath Filler', desc: 'Brushed Brass by ABI Interiors', dot: { top: '62.1%', left: '41.9%' } },
+  { id: 'tub', icon: '○', title: 'Freestanding Bath Tub', desc: 'Matte White Round', dot: { top: '83.5%', left: '49.5%' } },
+  { id: 'stone', icon: '▰', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '62.5%', left: '76.3%' } },
+  { id: 'basin', icon: '△', title: 'Undercounter Basin', desc: 'Pill Basin', dot: { top: '65.4%', left: '80.0%' } },
+  { id: 'drawer', icon: '◆', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '83.8%', left: '83.3%' } },
   { id: 'tapware', icon: '▫', title: 'Lux Range', desc: 'by ABI interior', dot: { top: '54%', left: '79%' } },
-  { id: 'light', icon: '✦', title: 'Loop Fusion Wall Light', desc: 'by Nook Collections', dot: { top: '33%', left: '83%' } },
+  { id: 'light', icon: '✦', title: 'Loop Fusion Wall Light', desc: 'by Nook Collections', dot: { top: '36.5%', left: '82.7%' } },
 ];
 
 const lightLivingItems = [
-  { id: 'cabinet', icon: '◆', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '65%', left: '22%' } },
-  { id: 'stone', icon: '▫', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '62%', left: '44%' } },
-  { id: 'fireplace', icon: '✧', title: 'Electric Fireplace', desc: 'by VisionLINE', dot: { top: '54%', left: '54%' } },
-  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '88%', left: '84%' } },
+  { id: 'cabinet', icon: '◆', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '63.8%', left: '23.3%' } },
+  { id: 'stone', icon: '▫', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '59.4%', left: '43.9%' } },
+  { id: 'fireplace', icon: '✧', title: 'Electric Fireplace', desc: 'by VisionLINE', dot: { top: '57.4%', left: '60.5%' } },
+  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '78.2%', left: '76.8%' } },
 ];
 
 
@@ -126,8 +126,6 @@ export default function Inclusions() {
       setActiveMobileIndex(closestIndex);
     }
   };
-
-
 
   const handleDotClick = (itemId, index) => {
     if (window.innerWidth >= 768) {
@@ -246,7 +244,7 @@ export default function Inclusions() {
                   return (
                     <motion.div 
                       key={item.id}
-                      className={`${styles.inclusions__hotspotWrap} ${isMobileActive ? styles.activeMobile : ''}`}
+                      className={`${styles.inclusions__hotspotWrap} ${activeDot === item.id ? styles.active : ''} ${isMobileActive ? styles.activeMobile : ''}`}
                       style={{ top: item.dot.top, left: item.dot.left, cursor: 'pointer' }}
                       onMouseEnter={() => window.innerWidth >= 768 && setActiveDot(item.id)}
                       onMouseLeave={() => window.innerWidth >= 768 && setActiveDot(null)}

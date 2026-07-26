@@ -67,22 +67,33 @@
   position: relative;
   width: 100%;
   overflow: hidden;
+}
 
-  /* Edge fade/blur using CSS mask — no extra DOM elements */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0%,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
+/* Highly optimized linear-gradient overlay edges to replace heavy mask-image */
+.marqueeWrapper::before,
+.marqueeWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 8%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.marqueeWrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-primary) 0%, transparent 100%);
+}
+
+.marqueeWrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-primary) 0%, transparent 100%);
+}
+
+/* Pause animation on hover to reduce GPU load and ease user clicking */
+.marqueeWrapper:hover .marqueeTrack {
+  animation-play-state: paused;
 }
 
 
@@ -96,6 +107,8 @@
   width: max-content;
   animation: marqueeScroll 45s linear infinite;
   will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 @keyframes marqueeScroll {
@@ -127,6 +140,8 @@
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 @media (min-width: 768px) {
@@ -170,13 +185,13 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-              filter 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
 }
 
 .card:hover .cardImage {
-  transform: scale(1.06);
-  filter: brightness(0.85);
+  transform: scale(1.06) translate3d(0, 0, 0);
 }
 
 
@@ -225,9 +240,7 @@
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-text-inverse);
-  background: rgba(14, 16, 15, 0.55);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(14, 16, 15, 0.85);
   padding: 6px 14px;
   border-radius: 100px;
   border: 1px solid rgba(197, 168, 128, 0.2);

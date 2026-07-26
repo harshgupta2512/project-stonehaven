@@ -65,7 +65,7 @@ const AMENITY_PILLS = [
 const projectIcon = L.divIcon({
   className: '',
   html: `<div class="sh-thumb">
-           <img src="images/facade-front.webp" alt="Stonehaven" />
+           <img src="images/Stonehaven_Cam_1_Exterior.jpg" alt="Stonehaven" />
            <div class="sh-thumb-label">STONEHAVEN</div>
          </div>`,
   iconSize: [120, 90],

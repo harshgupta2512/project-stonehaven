@@ -143,6 +143,11 @@
   z-index: 10;
 }
 
+.inclusions__hotspotWrap:hover,
+.inclusions__hotspotWrap.active {
+  z-index: 30;
+}
+
 .inclusions__dot {
   position: absolute;
   top: 50%;

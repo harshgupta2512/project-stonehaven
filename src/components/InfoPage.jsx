@@ -32,7 +32,7 @@ export default function InfoPage({ type, onClose }) {
           {isPrivacy ? (
             <>
               <h1 className={styles.infoPage__title}>Privacy Policy</h1>
-              <p className={styles.infoPage__date}>Last Updated: June 2026</p>
+              <p className={styles.infoPage__date}>Last Updated: July 2026</p>
 
               <section className={styles.infoPage__section}>
                 <h2>1. Introduction</h2>
@@ -102,7 +102,7 @@ export default function InfoPage({ type, onClose }) {
           ) : (
             <>
               <h1 className={styles.infoPage__title}>Disclaimer</h1>
-              <p className={styles.infoPage__date}>Last Updated: June 2026</p>
+              <p className={styles.infoPage__date}>Last Updated: July 2026</p>
 
               <section className={styles.infoPage__section}>
                 <h2>1. General Information</h2>

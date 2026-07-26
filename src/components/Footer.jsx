@@ -9,9 +9,12 @@ export default function Footer({ onPageChange }) {
           
           <div className={styles.footer__brand}>
             <h2 className={styles['footer__brand-name']}>Stonehaven</h2>
-            <p className={styles['footer__brand-sub']}>By Birch and Stone</p>
+            <div className={styles.footer__logoWrap}>
+              <span className={styles['footer__logo-by']}>By</span>
+              <img src="images/birch_stone_logo.svg" alt="Birch & Stone Developments" className={styles.footer__logo} />
+            </div>
             <div className={styles.footer__socials}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.footer__social} data-cursor="social">
+              <a href="https://www.facebook.com/profile.php?id=61589990112544" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className={styles.footer__social} data-cursor="social">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
               <a href="https://www.instagram.com/stonehavenresidences/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={styles.footer__social} data-cursor="social">
@@ -31,13 +34,15 @@ export default function Footer({ onPageChange }) {
 
           <div className={styles.footer__agents}>
             <h3 className={styles.footer__agentsTitle}>Selling Agents</h3>
-            <div className={styles.footer__agency}>RT Edgar</div>
+            <div className={styles.footer__agencyLogo}>
+              <img src="images/rtedgar_logo_cropped.png" alt="RT Edgar" className={styles.footer__logoImage} />
+            </div>
             <div className={styles.footer__agent}>
               <p className={styles.footer__agentName}>Mark Wridgway</p>
               <div className={styles.footer__agentContacts}>
                 <a href="tel:+61419510777" className={styles.footer__agentContact}>0419 510 777</a>
                 <span className={styles.footer__agentDivider}>|</span>
-                <a href="mailto:markw@rtedgar.com" className={styles.footer__agentContact}>markw@rtedgar.com</a>
+                <a href="mailto:markw@rtedgar.com.au" className={styles.footer__agentContact}>markw@rtedgar.com.au</a>
               </div>
             </div>
             <div className={styles.footer__agent}>

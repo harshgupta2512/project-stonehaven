@@ -43,7 +43,7 @@ export default function Vision() {
             }}
           >
             <video 
-              src="Videos/hf_20260530_091224_87818310-0deb-490f-b406-f868c067b6a6.mp4" 
+              src="Videos/hf_20260726_165140_a8ca2f7b-3b12-46e5-be1f-ae23711266a3.mp4" 
               className={styles.vision__video} 
               autoPlay 
               muted 

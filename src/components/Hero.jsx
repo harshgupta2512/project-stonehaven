@@ -39,8 +39,7 @@ export default function Hero({ scrollYProgress, onRegisterClick }) {
           poster="images/Stonehaven_Cam_1_Exterior.jpg"
           className={styles.hero__video}
         >
-          <source src="Videos/Hf 20260603 181317 2Bb3d50f-9354-40Aa-B986-6F5803d9fe3b.webm" type="video/webm" />
-          <source src="Videos/hf_20260530_091224_87818310-0deb-490f-b406-f868c067b6a6.mp4" type="video/mp4" />
+          <source src="Videos/hf_20260726_165140_a8ca2f7b-3b12-46e5-be1f-ae23711266a3.mp4" type="video/mp4" />
         </video>
       </motion.div>
       

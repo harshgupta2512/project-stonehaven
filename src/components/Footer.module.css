@@ -40,6 +40,36 @@
   color: var(--color-text-muted);
 }
 
+.footer__logoWrap {
+  margin-top: var(--space-xs);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-md);
+}
+
+.footer__logo-by {
+  font-family: var(--font-body);
+  font-size: 10px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.footer__logo {
+  height: 28px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(51%) saturate(170%) hue-rotate(4deg) brightness(74%) contrast(132%);
+  opacity: 0.8;
+  transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.footer__logo:hover {
+  opacity: 1;
+}
+
 /* Nav */
 .footer__nav {
   display: flex;
@@ -200,6 +230,30 @@
   letter-spacing: 0.05em;
   color: var(--color-accent);
   margin-bottom: var(--space-xs);
+}
+
+.footer__agencyLogo {
+  margin-bottom: var(--space-xs);
+  display: inline-flex;
+}
+
+@media (min-width: 1024px) {
+  .footer__agencyLogo {
+    justify-content: flex-end;
+  }
+}
+
+.footer__logoImage {
+  height: 20px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(79%) sepia(51%) saturate(170%) hue-rotate(4deg) brightness(74%) contrast(132%);
+  opacity: 0.85;
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.footer__logoImage:hover {
+  opacity: 1;
 }
 
 .footer__agent {

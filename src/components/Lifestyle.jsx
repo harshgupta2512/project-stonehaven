@@ -4,12 +4,12 @@ import styles from './Lifestyle.module.css';
 import galleryStyles from './Gallery.module.css';
 
 const LIFESTYLE_IMAGES = [
-  { url: 'images/lifestyle/A071V_HedgleyDene_019.jpg', alt: 'Hedgeley Dene', type: 'large' },
-  { url: 'images/lifestyle/198_Wattletree_Lifestyles038.jpg', alt: 'Wattletree Lifestyles', type: 'normal' },
-  { url: 'images/lifestyle/MalvernValley_156.jpg', alt: 'Malvern Valley', type: 'normal' },
-  { url: 'images/lifestyle/MalvernVillageLifestyles_027.jpg', alt: 'Malvern Village', type: 'normal' },
-  { url: 'images/lifestyle/images.jpg', alt: 'Grazia Restaurant', type: 'normal' },
-  { url: 'images/lifestyle/198_Wattletree_Lifestyles067.jpg', alt: 'Cafe culture', type: 'normal' },
+  { url: 'images/lifestyle/A071V_HedgleyDene_019.jpg', alt: 'Hedgeley Dene Gardens', category: 'Parks & Recreation', type: 'large' },
+  { url: 'images/lifestyle/198_Wattletree_Lifestyles038.jpg', alt: 'Cabrini Malvern', category: 'Medical', type: 'normal' },
+  { url: 'images/lifestyle/MalvernValley_156.jpg', alt: 'Malvern Valley Golf Course', category: 'Recreation', type: 'normal' },
+  { url: 'images/lifestyle/MalvernVillageLifestyles_027.jpg', alt: 'Malvern Village', category: 'Shopping & Dining', type: 'normal' },
+  { url: 'images/hf_20260724_090952_0a257b79-5f54-4714-a9e9-f8ad480037e1.jpg', alt: 'Grazia Restaurant', category: 'Shopping & Dining', type: 'normal' },
+  { url: 'images/lifestyle/198_Wattletree_Lifestyles067.jpg', alt: 'Local Cafes', category: 'Shopping & Dining', type: 'normal' },
 ];
 
 export default function Lifestyle() {
@@ -157,7 +157,7 @@ export default function Lifestyle() {
                 {/* Luxury metadata details overlay */}
                 <div className={galleryStyles.lightboxMeta}>
                   <div className={galleryStyles.lightboxMetaText}>
-                    <span className={galleryStyles.lightboxCategory}>Lifestyle</span>
+                    <span className={galleryStyles.lightboxCategory}>{LIFESTYLE_IMAGES[activeIndex].category}</span>
                     <h3 className={galleryStyles.lightboxTitle}>{LIFESTYLE_IMAGES[activeIndex].alt}</h3>
                   </div>
                   <div className={galleryStyles.lightboxCounter}>
