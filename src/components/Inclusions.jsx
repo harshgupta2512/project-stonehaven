@@ -78,7 +78,7 @@ const INCLUSIONS_DATA = {
   'residence-1': {
     label: 'Residence 1',
     tabs: {
-      kitchen: { label: 'Kitchen', items: lightKitchenItems, image: 'images/1 kitchen_1.jpg' },
+      kitchen: { label: 'Kitchen', items: lightKitchenItems, image: 'images/1_kitchen_1.webp' },
       bathroom: { label: 'Bathrooms', items: lightBathroomItems, image: 'images/Master Ensuit_cam_1_1.jpg' },
       living: { label: 'Living & Exterior', items: lightLivingItems, image: 'images/1_Living & dining.jpg' }
     }

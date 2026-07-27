@@ -7,7 +7,7 @@ const galleryItems = [
   { id: 2,  src: "images/Stonehaven_Cam_2_Exterior.jpg",     title: "Street Facade 2",   label: "Exterior", category: "Exterior" },
   { id: 3,  src: "images/Single house cam_1 B&S (1).jpeg",   title: "Residence 1",       label: "Exterior", category: "Residence 1" },
   { id: 4,  src: "images/Single house cam_1 B&S (1A).jpg",   title: "Residence 1A",      label: "Exterior", category: "Residence 1A" },
-  { id: 5,  src: "images/1 kitchen_1.jpg",                   title: "Residence 1 Kitchen", label: "Interior", category: "Residence 1" },
+  { id: 5,  src: "images/1_kitchen_1.webp",                   title: "Residence 1 Kitchen", label: "Interior", category: "Residence 1" },
   { id: 6,  src: "images/1A kitchen.jpg",                    title: "Residence 1A Kitchen", label: "Interior", category: "Residence 1A" },
   { id: 7,  src: "images/1_Living & dining.jpg",             title: "Living & Dining",   label: "Interior", category: "Residence 1" },
   { id: 8,  src: "images/1A_Living & dining.jpg",            title: "Living & Dining",   label: "Interior", category: "Residence 1A" },

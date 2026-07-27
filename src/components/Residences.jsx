@@ -12,7 +12,7 @@ export default function Residences() {
       
       {/* Scene 1: Full-bleed — Kitchen 1 (Light Theme / 1) */}
       <div className={styles['scene--full']}>
-        <div className={styles['scene--full__bg']} style={{ backgroundImage: "url('images/1 kitchen_1.jpg')" }}></div>
+        <div className={styles['scene--full__bg']} style={{ backgroundImage: "url('images/1_kitchen_1.webp')" }}></div>
         <div className={styles['scene--full__overlay']}></div>
         <motion.div 
           className={styles['scene--full__content']}
