@@ -79,7 +79,7 @@ export default function Team() {
           {/* 4. Carlton Homes */}
           <motion.div className={styles.team__card} variants={itemVars} whileHover={{ y: -8, boxShadow: "0 12px 32px rgba(0,0,0,0.08)" }}>
             <div className={styles.team__logoWrap}>
-              <span className={styles.team__devLogo}>Carlton Homes</span>
+              <img src="images/carlton_logo.png" alt="Carlton Homes" className={styles.team__logo} />
             </div>
             <span className={styles.team__role}>Builder</span>
             <h3 className={styles.team__firm}>Carlton Homes</h3>

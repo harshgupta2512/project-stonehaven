@@ -239,7 +239,7 @@ export default function Location() {
         >
           <span className="section-label section-label--centered">Your Neighbourhood</span>
           <h2 className={styles.heading}>
-            Malvern East — leafy streets<br />and effortless connection.
+            Malvern East — leafy streets<br />and effortless connection
           </h2>
           <p className={styles.description}>
             Local parks, playgrounds and green spaces are woven into the everyday rhythm, offering a calm and highly liveable setting for families.

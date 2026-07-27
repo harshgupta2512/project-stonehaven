@@ -71,7 +71,7 @@ export default function Features() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <span className="section-label section-label--light">Details</span>
-          <h2 className="section-heading section-heading--light">Every detail, considered.</h2>
+          <h2 className="section-heading section-heading--light">Every detail, considered</h2>
         </motion.div>
 
         <motion.div 

@@ -150,7 +150,7 @@ export default function Inclusions() {
           transition={{ duration: 0.6 }}
         >
           <span className="section-label section-label--centered">Premium Inclusions</span>
-          <h2 className="section-heading section-heading--dark" style={{ textAlign: "center" }}>Luxury comes standard.</h2>
+          <h2 className="section-heading section-heading--dark" style={{ textAlign: "center" }}>Luxury comes standard</h2>
           <p className="section-body" style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto", marginBottom: "2rem" }}>
             Every Stonehaven residence is delivered with a curated selection of premium brands and finishes — no upgrades required.
           </p>
