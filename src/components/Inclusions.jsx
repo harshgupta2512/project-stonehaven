@@ -27,7 +27,7 @@ const darkBathroomItems = [
   { id: 'basin', icon: '△', title: 'Undercounter Basin', desc: 'Pill Basin', dot: { top: '60.8%', left: '77.3%' } },
   { id: 'drawer', icon: '◆', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '70.9%', left: '83.9%' } },
   { id: 'tapware', icon: '▫', title: 'Bench Mounted Spout', desc: 'by ABI Interiors', dot: { top: '53.0%', left: '72.9%' } },
-  { id: 'light', icon: '✦', title: 'Mino 1 Wall Light', desc: 'by Lucci', dot: { top: '38.6%', left: '78.1%' } },
+  { id: 'light', icon: '✦', title: 'Loop Fusion Wall Light', desc: 'by Nook Collections', dot: { top: '38.6%', left: '78.1%' } },
 ];
 
 const darkLivingItems = [
