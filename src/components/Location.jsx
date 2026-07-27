@@ -29,6 +29,7 @@ const POIS = [
   { name: 'Riserva Wine', cat: 'food', coords: [-37.864828, 145.049597], dist: '1.5km', drive: '3 min' },
   { name: 'Grazia Restaurant', cat: 'food', coords: [-37.864247, 145.050193], dist: '1.5km', drive: '3 min' },
   // Shopping
+  { name: 'Chadstone Shopping', cat: 'shopping', coords: [-37.886, 145.083], dist: '3.1km', drive: '8 min' },
   { name: 'Upper Glen Iris Shopping', cat: 'shopping', coords: [-37.858994, 145.064426], dist: '1.8km', drive: '4 min' },
   { name: 'Carnegie Central', cat: 'shopping', coords: [-37.884729, 145.058649], dist: '1.8km', drive: '5 min' },
   { name: 'Caulfield Village', cat: 'shopping', coords: [-37.877500, 145.042000], dist: '2.3km', drive: '5 min' },
@@ -158,12 +159,7 @@ export default function Location() {
   const [routeCache, setRouteCache] = useState({});
 
   const handleCardClick = (title) => {
-    let poiMatch = null;
-    if (title === 'Chadstone Shopping') {
-      poiMatch = POIS.find(p => p.name === 'The Meat & Wine Co');
-    } else {
-      poiMatch = POIS.find(p => p.name.toLowerCase() === title.toLowerCase());
-    }
+    const poiMatch = POIS.find(p => p.name.toLowerCase() === title.toLowerCase());
 
     if (poiMatch) {
       if (activePoi && activePoi.name === poiMatch.name) {
@@ -176,9 +172,6 @@ export default function Location() {
 
   const isCardActive = (title) => {
     if (!activePoi) return false;
-    if (title === 'Chadstone Shopping') {
-      return activePoi.name === 'The Meat & Wine Co';
-    }
     return activePoi.name.toLowerCase() === title.toLowerCase();
   };
 
