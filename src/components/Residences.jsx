@@ -95,7 +95,7 @@ export default function Residences() {
               <span className="section-label">Architecture</span>
               <h2 className="section-heading section-heading--dark">Two Residences,<br/>Two Identities</h2>
               <p className="section-body">
-                Residence 1 speaks in warm timber and brushed brass. Residence 1A answers in Cafe oak and brushed gunmetal. Each is distinct, yet together they form a composed streetscape.
+                Residence 1 speaks in warm timber and brushed brass. Residence 1A answers in Cafe oak and brushed gunmetal. Each is distinct, yet together they form a desirable composed streetscape.
               </p>
             </motion.div>
 

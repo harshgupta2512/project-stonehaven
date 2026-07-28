@@ -42,8 +42,8 @@ export default function Features() {
     {
       num: "04",
       title: "Singular Design",
-      sub: "Never to be repeated",
-      desc: "Exclusivity defined. A custom architectural design never to be built again. Meticulously crafted specifically for Stonehaven Avenue. The architecture responds to the streetscape with a confidence and elegance that will never be replicated elsewhere."
+      sub: "Private Lift Access",
+      desc: "Exclusivity defined. A custom architectural design meticulously crafted specifically for Stonehaven Avenue. Featuring individual private lift access, the residences respond to the streetscape with a confidence and elegance tailored for sophisticated modern living."
     },
     {
       num: "05",

@@ -80,7 +80,7 @@ const INCLUSIONS_DATA = {
     tabs: {
       kitchen: { label: 'Kitchen', items: lightKitchenItems, image: 'images/1_kitchen_1.webp' },
       bathroom: { label: 'Bathrooms', items: lightBathroomItems, image: 'images/Master Ensuit_cam_1_1.jpg' },
-      living: { label: 'Living & Exterior', items: lightLivingItems, image: 'images/1_Living & dining.jpg' }
+      living: { label: 'Living', items: lightLivingItems, image: 'images/1_Living & dining.jpg' }
     }
   },
   'residence-1a': {
@@ -88,7 +88,7 @@ const INCLUSIONS_DATA = {
     tabs: {
       kitchen: { label: 'Kitchen', items: darkKitchenItems, image: 'images/1A kitchen.jpg' },
       bathroom: { label: 'Bathrooms', items: darkBathroomItems, image: 'images/Master Ensuit_cam_2_1A.jpg' },
-      living: { label: 'Living & Exterior', items: darkLivingItems, image: 'images/1A_Living & dining.jpg' }
+      living: { label: 'Living', items: darkLivingItems, image: 'images/1A_Living & dining.jpg' }
     }
   }
 };
@@ -152,7 +152,7 @@ export default function Inclusions() {
           <span className="section-label section-label--centered">Premium Inclusions</span>
           <h2 className="section-heading section-heading--dark" style={{ textAlign: "center" }}>Luxury comes standard</h2>
           <p className="section-body" style={{ textAlign: "center", maxWidth: "600px", margin: "0 auto", marginBottom: "2rem" }}>
-            Every Stonehaven residence is delivered with a curated selection of premium brands and finishes — no upgrades required.
+            Every Stonehaven residence is delivered to the highest quality incorporating the finest selection of premium brands and finishes. Buy now to customise your new home and maximise stamp duty savings.
           </p>
 
           <div className={styles.homeToggle}>

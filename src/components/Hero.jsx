@@ -58,7 +58,7 @@ export default function Hero({ scrollYProgress, onRegisterClick }) {
         </div>
         <div style={{ overflow: "hidden" }}>
           <motion.p className={styles.hero__subtitle} variants={itemVars}>
-            A refined modern collection bringing boutique luxury to Malvern East
+            Two individual freestanding luxurious modern homes
           </motion.p>
         </div>
         <div style={{ overflow: "hidden" }}>
