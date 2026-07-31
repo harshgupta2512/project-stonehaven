@@ -8,7 +8,7 @@ const LIFESTYLE_IMAGES = [
   { url: 'images/lifestyle/198_Wattletree_Lifestyles038.jpg', alt: 'Cabrini Malvern', category: 'Medical', type: 'normal' },
   { url: 'images/lifestyle/MalvernValley_156.jpg', alt: 'Malvern Valley Golf Course', category: 'Recreation', type: 'normal' },
   { url: 'images/lifestyle/MalvernVillageLifestyles_027.jpg', alt: 'Malvern Village', category: 'Shopping & Dining', type: 'normal' },
-  { url: 'images/hf_20260724_090952_0a257b79-5f54-4714-a9e9-f8ad480037e1.jpg', alt: 'Grazia Restaurant', category: 'Shopping & Dining', type: 'normal' },
+  { url: 'images/grazia_restaurant.jpg', alt: 'Grazia Restaurant', category: 'Shopping & Dining', type: 'normal' },
   { url: 'images/lifestyle/198_Wattletree_Lifestyles067.jpg', alt: 'Local Cafes', category: 'Shopping & Dining', type: 'normal' },
 ];
 

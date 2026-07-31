@@ -14,7 +14,7 @@ const darkKitchenItems = [
   { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'by Miele', dot: { top: '51.3%', left: '74.1%' } },
   { id: 'board', icon: '▫', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '26.2%', left: '75.1%' } },
   { id: 'splashback', icon: '✦', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '38.3%', left: '37.3%' } },
-  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '82.4%', left: '80.2%' } },
+  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Whitebridge Chevron by Havwoods', dot: { top: '82.4%', left: '80.2%' } },
 ];
 
 const darkBathroomItems = [
@@ -34,7 +34,7 @@ const darkLivingItems = [
   { id: 'cabinet', icon: '◆', title: 'Cafe Oak in Matt Finish', desc: 'by Polytec', dot: { top: '63.8%', left: '23.3%' } },
   { id: 'stone', icon: '▫', title: 'Santorini Gold', desc: 'by AC Stone', dot: { top: '59.4%', left: '43.9%' } },
   { id: 'fireplace', icon: '✧', title: 'Electric Fireplace', desc: 'by VisionLINE', dot: { top: '57.4%', left: '60.5%' } },
-  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '78.2%', left: '76.8%' } },
+  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Whitebridge Chevron by Havwoods', dot: { top: '78.2%', left: '76.8%' } },
 ];
 
 
@@ -50,7 +50,7 @@ const lightKitchenItems = [
   { id: 'oven', icon: '◆', title: '60cm Wide Oven', desc: 'by Miele', dot: { top: '54.3%', left: '69.8%' } },
   { id: 'board', icon: '▫', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '20%', left: '72.5%' } },
   { id: 'splashback', icon: '✦', title: 'Monaco Drift', desc: 'by AC Stone', dot: { top: '38.3%', left: '37.3%' } },
-  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '82.4%', left: '80.2%' } },
+  { id: 'flooring', icon: '✧', title: 'Wood Flooring', desc: 'Whitebridge Chevron by Havwoods', dot: { top: '82.4%', left: '80.2%' } },
 ];
 
 const lightBathroomItems = [
@@ -70,7 +70,7 @@ const lightLivingItems = [
   { id: 'cabinet', icon: '◆', title: 'Ecru Oak in Matt Finish', desc: 'by Polytec', dot: { top: '63.8%', left: '23.3%' } },
   { id: 'stone', icon: '▫', title: 'Monaco Drift', desc: 'by AC Stone', dot: { top: '59.4%', left: '43.9%' } },
   { id: 'fireplace', icon: '✧', title: 'Electric Fireplace', desc: 'by VisionLINE', dot: { top: '57.4%', left: '60.5%' } },
-  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Botany Herringbone by Havwoods', dot: { top: '78.2%', left: '76.8%' } },
+  { id: 'flooring', icon: '○', title: 'Wood Flooring', desc: 'Whitebridge Chevron by Havwoods', dot: { top: '78.2%', left: '76.8%' } },
 ];
 
 

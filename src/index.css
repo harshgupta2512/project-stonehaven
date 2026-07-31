@@ -167,7 +167,7 @@ body {
   color: var(--color-text-inverse);
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none; /* Hide default cursor for custom implementation */
+  /* cursor: none; Hide default cursor for custom implementation */
 }
 
 @media (pointer: coarse) {
