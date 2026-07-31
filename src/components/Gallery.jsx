@@ -197,18 +197,18 @@ export default function Gallery() {
                   alt={filteredItems[activeIndex].title} 
                   className={styles.lightboxImage}
                 />
-                
-                {/* Luxury metadata details overlay */}
-                <div className={styles.lightboxMeta}>
-                  <div className={styles.lightboxMetaText}>
-                    <span className={styles.lightboxCategory}>{filteredItems[activeIndex].label}</span>
-                    <h3 className={styles.lightboxTitle}>{filteredItems[activeIndex].title}</h3>
-                  </div>
-                  <div className={styles.lightboxCounter}>
-                    {String(activeIndex + 1).padStart(2, '0')} / {String(filteredItems.length).padStart(2, '0')}
-                  </div>
-                </div>
               </motion.div>
+              
+              {/* Separate Bottom Bar for details */}
+              <div className={styles.lightboxMeta}>
+                <div className={styles.lightboxMetaText}>
+                  <span className={styles.lightboxCategory}>{filteredItems[activeIndex].label}</span>
+                  <h3 className={styles.lightboxTitle}>{filteredItems[activeIndex].title}</h3>
+                </div>
+                <div className={styles.lightboxCounter}>
+                  {String(activeIndex + 1).padStart(2, '0')} / {String(filteredItems.length).padStart(2, '0')}
+                </div>
+              </div>
             </div>
 
             {/* Right Navigation Arrow */}

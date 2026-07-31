@@ -9,7 +9,7 @@ const LIFESTYLE_IMAGES = [
   { url: 'images/lifestyle/MalvernValley_156.jpg', alt: 'Malvern Valley Golf Course', category: 'Recreation', type: 'normal' },
   { url: 'images/lifestyle/MalvernVillageLifestyles_027.jpg', alt: 'Malvern Village', category: 'Shopping & Dining', type: 'normal' },
   { url: 'images/grazia_restaurant.jpg', alt: 'Grazia Restaurant', category: 'Shopping & Dining', type: 'normal' },
-  { url: 'images/lifestyle/198_Wattletree_Lifestyles067.jpg', alt: 'Local Cafes', category: 'Shopping & Dining', type: 'normal' },
+  { url: 'images/lifestyle/198_Wattletree_Lifestyles067.jpg', alt: 'Milton Gray Reserve', category: 'Parks & Recreation', type: 'normal' },
   { url: 'images/sacre_coeur.png', alt: 'Sacré Cœur, Glen Iris', category: 'Education', type: 'normal' },
 ];
 
