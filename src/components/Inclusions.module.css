@@ -98,6 +98,14 @@
   display: block;
 }
 
+.inclusions__zoomInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.15); /* Zooms in the image and hotspots together */
+  transform-origin: center center;
+}
+
 /* Hotspots */
 .inclusions__hotspots {
   position: absolute;

@@ -16,6 +16,7 @@ const galleryItems = [
   { id: 11, src: "images/Master bedroom_cam 1_1.jpg",        title: "Master Bedroom",    label: "Interior", category: "Residence 1" },
   { id: 12, src: "images/master_bedroom_1a.webp",        title: "Master Bedroom",    label: "Interior", category: "Residence 1A" },
   { id: 13, src: "images/Cam_2_wardrobe.jpg",                title: "Wardrobe",          label: "Interior", category: "Residence 1" },
+  { id: 14, src: "images/Cam_3_swimming_pool_Day.webp",      title: "Swimming Pool",     label: "Interior", category: "Residence 1" },
 ];
 
 export default function Gallery() {

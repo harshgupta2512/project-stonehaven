@@ -220,57 +220,59 @@ export default function Inclusions() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <img 
-                src={currentData.image} 
-                alt={currentData.label} 
-                className={styles.inclusions__image} 
-              />
-              
-              {/* Desktop & Mobile Hotspots */}
-              <div className={styles.inclusions__hotspots}>
-                {currentData.items.map((item, index) => {
-                  const isBottomHalf = parseInt(item.dot.top) > 50;
-                  const isRightSide = parseInt(item.dot.left) > 75;
-                  const isLeftSide = parseInt(item.dot.left) < 25;
-                  const isMobileActive = activeMobileIndex === index;
+              <div className={styles.inclusions__zoomInner}>
+                <img 
+                  src={currentData.image} 
+                  alt={currentData.label} 
+                  className={styles.inclusions__image} 
+                />
+                
+                {/* Desktop & Mobile Hotspots */}
+                <div className={styles.inclusions__hotspots}>
+                  {currentData.items.map((item, index) => {
+                    const isBottomHalf = parseInt(item.dot.top) > 50;
+                    const isRightSide = parseInt(item.dot.left) > 75;
+                    const isLeftSide = parseInt(item.dot.left) < 25;
+                    const isMobileActive = activeMobileIndex === index;
 
-                  const tooltipClasses = [
-                    styles.inclusions__tooltip,
-                    isBottomHalf ? styles['inclusions__tooltip--above'] : '',
-                    isRightSide ? styles['inclusions__tooltip--right'] : '',
-                    isLeftSide ? styles['inclusions__tooltip--left'] : ''
-                  ].filter(Boolean).join(' ');
+                    const tooltipClasses = [
+                      styles.inclusions__tooltip,
+                      isBottomHalf ? styles['inclusions__tooltip--above'] : '',
+                      isRightSide ? styles['inclusions__tooltip--right'] : '',
+                      isLeftSide ? styles['inclusions__tooltip--left'] : ''
+                    ].filter(Boolean).join(' ');
 
-                  return (
-                    <motion.div 
-                      key={item.id}
-                      className={`${styles.inclusions__hotspotWrap} ${activeDot === item.id ? styles.active : ''} ${isMobileActive ? styles.activeMobile : ''}`}
-                      style={{ top: item.dot.top, left: item.dot.left, cursor: 'pointer' }}
-                      onMouseEnter={() => window.innerWidth >= 768 && setActiveDot(item.id)}
-                      onMouseLeave={() => window.innerWidth >= 768 && setActiveDot(null)}
-                      onClick={() => handleDotClick(item.id, index)}
-                    >
-                      <div className={styles.inclusions__dot}></div>
-                      <AnimatePresence>
-                        {activeDot === item.id && (
-                          <motion.div 
-                            className={tooltipClasses}
-                            initial={{ opacity: 0, y: isBottomHalf ? -10 : 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: isBottomHalf ? -10 : 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
-                          >
-                            <div className={styles.tooltip__header}>
-                              <span className={styles.tooltip__icon}>{item.icon}</span>
-                              <span className={styles.tooltip__title}>{item.title}</span>
-                            </div>
-                            <p className={styles.tooltip__desc}>{item.desc}</p>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </motion.div>
-                  );
-                })}
+                    return (
+                      <motion.div 
+                        key={item.id}
+                        className={`${styles.inclusions__hotspotWrap} ${activeDot === item.id ? styles.active : ''} ${isMobileActive ? styles.activeMobile : ''}`}
+                        style={{ top: item.dot.top, left: item.dot.left, cursor: 'pointer' }}
+                        onMouseEnter={() => window.innerWidth >= 768 && setActiveDot(item.id)}
+                        onMouseLeave={() => window.innerWidth >= 768 && setActiveDot(null)}
+                        onClick={() => handleDotClick(item.id, index)}
+                      >
+                        <div className={styles.inclusions__dot}></div>
+                        <AnimatePresence>
+                          {activeDot === item.id && (
+                            <motion.div 
+                              className={tooltipClasses}
+                              initial={{ opacity: 0, y: isBottomHalf ? -10 : 10, scale: 0.95 }}
+                              animate={{ opacity: 1, y: 0, scale: 1 }}
+                              exit={{ opacity: 0, y: isBottomHalf ? -10 : 10, scale: 0.95 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <div className={styles.tooltip__header}>
+                                <span className={styles.tooltip__icon}>{item.icon}</span>
+                                <span className={styles.tooltip__title}>{item.title}</span>
+                              </div>
+                              <p className={styles.tooltip__desc}>{item.desc}</p>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                    );
+                  })}
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
