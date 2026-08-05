@@ -87,7 +87,7 @@ const INCLUSIONS_DATA = {
     label: 'Residence 1A',
     tabs: {
       kitchen: { label: 'Kitchen', items: darkKitchenItems, image: 'images/1A kitchen.jpg' },
-      bathroom: { label: 'Bathrooms', items: darkBathroomItems, image: 'images/Master Ensuit_cam_2_1A.jpg' },
+      bathroom: { label: 'Bathrooms', items: darkBathroomItems, image: 'images/Stonehaven_CAM1_ensuit_1A.webp' },
       living: { label: 'Living', items: darkLivingItems, image: 'images/1A_Living & dining.jpg' }
     }
   }

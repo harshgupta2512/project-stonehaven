@@ -12,7 +12,7 @@ const galleryItems = [
   { id: 7,  src: "images/1_Living & dining.jpg",             title: "Living & Dining",   label: "Interior", category: "Residence 1" },
   { id: 8,  src: "images/1A_Living & dining.jpg",            title: "Living & Dining",   label: "Interior", category: "Residence 1A" },
   { id: 9,  src: "images/Master Ensuit_cam_1_1.jpg",         title: "Master Ensuite",    label: "Interior", category: "Residence 1" },
-  { id: 10, src: "images/Master Ensuit_cam_2_1A.jpg",        title: "Master Ensuite",    label: "Interior", category: "Residence 1A" },
+  { id: 10, src: "images/Stonehaven_CAM1_ensuit_1A.webp",    title: "Master Ensuite",    label: "Interior", category: "Residence 1A" },
   { id: 11, src: "images/Master bedroom_cam 1_1.jpg",        title: "Master Bedroom",    label: "Interior", category: "Residence 1" },
   { id: 12, src: "images/master_bedroom_1a.webp",        title: "Master Bedroom",    label: "Interior", category: "Residence 1A" },
   { id: 13, src: "images/Cam_2_wardrobe.jpg",                title: "Wardrobe",          label: "Interior", category: "Residence 1" },
