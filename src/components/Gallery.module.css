@@ -121,11 +121,27 @@
   }
 }
 
-/* Slow down on smaller screens for readability */
+/* Mobile: Native touch scrolling instead of animation */
 @media (max-width: 768px) {
   .marqueeTrack {
-    animation-duration: 25s;
-    gap: 10px;
+    animation: none;
+    transform: none !important;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 var(--space-md);
+    padding: 0 var(--space-md);
+    gap: 16px;
+  }
+  .marqueeTrack::-webkit-scrollbar {
+    display: none;
+  }
+  .marqueeWrapper::before,
+  .marqueeWrapper::after {
+    display: none;
   }
 }
 
@@ -159,6 +175,14 @@
 @media (min-width: 1440px) {
   .card {
     width: 260px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .card {
+    scroll-snap-align: center;
   }
 }
 
