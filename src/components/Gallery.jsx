@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import styles from './Gallery.module.css';
 
@@ -25,13 +25,52 @@ export default function Gallery() {
 
   const filteredItems = galleryItems.filter(item => item.category === filter || item.category === 'Exterior');
   
-  // Ensure enough items exist to scroll seamlessly on large screens
-  const copiesNeeded = Math.max(1, Math.ceil(8 / (filteredItems.length || 1)));
+  // Increase copies slightly to ensure a long scrollable area for mobile
+  const copiesNeeded = Math.max(2, Math.ceil(12 / (filteredItems.length || 1)));
   // We duplicate the required copies twice so the left half equals the right half exactly
   const displayItems = Array(copiesNeeded * 2).fill(filteredItems).flat();
   
   // Calculate dynamic animation duration to keep speed constant
   const animationDuration = `${filteredItems.length * copiesNeeded * 4.5}s`;
+
+  const trackRef = useRef(null);
+  const isInteracting = useRef(false);
+
+  // Auto-scroll logic for mobile (where CSS animation is disabled)
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    let animationId;
+    let position = track.scrollLeft;
+
+    const scrollLoop = () => {
+      // Only run auto-scroll if we are in mobile view
+      if (window.innerWidth <= 768 && !isInteracting.current && activeIndex === null) {
+        position += 0.5; // Speed of auto-scroll
+        
+        // Sync position with actual scrollLeft in case user manually scrolled
+        if (Math.abs(position - track.scrollLeft) > 2) {
+          position = track.scrollLeft + 0.5;
+        }
+
+        track.scrollLeft = position;
+
+        // Seamless infinite loop:
+        // Because displayItems is mirrored (2 halves), when we reach the start of the second half,
+        // we can silently jump back to the start of the first half.
+        const halfWidth = track.scrollWidth / 2;
+        if (track.scrollLeft >= halfWidth) {
+          track.scrollLeft -= halfWidth;
+          position = track.scrollLeft;
+        }
+      }
+      animationId = requestAnimationFrame(scrollLoop);
+    };
+
+    animationId = requestAnimationFrame(scrollLoop);
+    return () => cancelAnimationFrame(animationId);
+  }, [activeIndex]);
 
   const openLightbox = (index) => {
     const originalIndex = index % filteredItems.length;
@@ -114,9 +153,14 @@ export default function Gallery() {
       {/* Marquee wrapper — edge masks applied via CSS mask-image */}
       <div className={styles.marqueeWrapper}>
         <motion.div 
+          ref={trackRef}
           className={styles.marqueeTrack}
           style={{ animationDuration: animationDuration }}
           key={filter} /* Force re-mount of animation on filter change */
+          onTouchStart={() => { isInteracting.current = true; }}
+          onTouchEnd={() => { isInteracting.current = false; }}
+          onMouseEnter={() => { isInteracting.current = true; }}
+          onMouseLeave={() => { isInteracting.current = false; }}
         >
           {displayItems.map((item, i) => (
             <div 

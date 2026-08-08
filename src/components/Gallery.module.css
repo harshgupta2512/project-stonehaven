@@ -131,8 +131,6 @@
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0 var(--space-md);
     padding: 0 var(--space-md);
     gap: 16px;
   }
@@ -181,9 +179,7 @@
 
 
 @media (max-width: 768px) {
-  .card {
-    scroll-snap-align: center;
-  }
+  /* Removed scroll-snap to prevent fighting with JS auto-scroll */
 }
 
 .card:hover {
