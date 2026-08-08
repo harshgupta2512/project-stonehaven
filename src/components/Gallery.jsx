@@ -34,7 +34,27 @@ export default function Gallery() {
   const animationDuration = `${filteredItems.length * copiesNeeded * 4.5}s`;
 
   const trackRef = useRef(null);
+  const positionRef = useRef(0);
   const isInteracting = useRef(false);
+  const interactionTimeout = useRef(null);
+
+  const pauseAutoScroll = () => {
+    isInteracting.current = true;
+    if (interactionTimeout.current) clearTimeout(interactionTimeout.current);
+    interactionTimeout.current = setTimeout(() => {
+      isInteracting.current = false;
+    }, 1500); // Resume 1.5s after last interaction to allow for momentum scrolling
+  };
+
+  const handleScroll = (e) => {
+    const track = e.target;
+    // Ignore scroll events triggered by our own JS loop (which moves <= 2px at a time)
+    if (Math.abs(track.scrollLeft - positionRef.current) <= 2) return;
+    
+    // Must be user scrolling
+    pauseAutoScroll();
+    positionRef.current = track.scrollLeft;
+  };
 
   // Auto-scroll logic for mobile (where CSS animation is disabled)
   useEffect(() => {
@@ -42,27 +62,25 @@ export default function Gallery() {
     if (!track) return;
 
     let animationId;
-    let position = track.scrollLeft;
+    positionRef.current = track.scrollLeft; // Initialize
 
     const scrollLoop = () => {
       // Only run auto-scroll if we are in mobile view
       if (window.innerWidth <= 768 && !isInteracting.current && activeIndex === null) {
-        position += 0.5; // Speed of auto-scroll
+        positionRef.current += 0.5; // Speed of auto-scroll
         
-        // Sync position with actual scrollLeft in case user manually scrolled
-        if (Math.abs(position - track.scrollLeft) > 2) {
-          position = track.scrollLeft + 0.5;
+        // Sync position with actual scrollLeft in case it drifted
+        if (Math.abs(positionRef.current - track.scrollLeft) > 2) {
+          positionRef.current = track.scrollLeft + 0.5;
         }
 
-        track.scrollLeft = position;
+        track.scrollLeft = positionRef.current;
 
         // Seamless infinite loop:
-        // Because displayItems is mirrored (2 halves), when we reach the start of the second half,
-        // we can silently jump back to the start of the first half.
         const halfWidth = track.scrollWidth / 2;
-        if (track.scrollLeft >= halfWidth) {
+        if (track.scrollLeft >= halfWidth && halfWidth > 50) {
           track.scrollLeft -= halfWidth;
-          position = track.scrollLeft;
+          positionRef.current = track.scrollLeft;
         }
       }
       animationId = requestAnimationFrame(scrollLoop);
@@ -70,7 +88,7 @@ export default function Gallery() {
 
     animationId = requestAnimationFrame(scrollLoop);
     return () => cancelAnimationFrame(animationId);
-  }, [activeIndex]);
+  }, [activeIndex, filter]);
 
   const openLightbox = (index) => {
     const originalIndex = index % filteredItems.length;
@@ -157,10 +175,8 @@ export default function Gallery() {
           className={styles.marqueeTrack}
           style={{ animationDuration: animationDuration }}
           key={filter} /* Force re-mount of animation on filter change */
-          onTouchStart={() => { isInteracting.current = true; }}
-          onTouchEnd={() => { isInteracting.current = false; }}
-          onMouseEnter={() => { isInteracting.current = true; }}
-          onMouseLeave={() => { isInteracting.current = false; }}
+          onTouchStart={pauseAutoScroll}
+          onScroll={handleScroll}
         >
           {displayItems.map((item, i) => (
             <div 
